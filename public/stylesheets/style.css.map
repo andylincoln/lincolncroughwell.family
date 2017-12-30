@@ -1,0 +1,22 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"style.scss",
+		"utility/_breakpoints.scss",
+		"utility/_mixins.scss",
+		"utility/_classes.scss",
+		"assets/_images.scss",
+		"assets/_colors.scss",
+		"assets/_fonts.scss",
+		"base/_base.scss",
+		"base/_typography.scss",
+		"base/_forms.scss",
+		"content/_content.scss",
+		"global/_header.scss",
+		"global/_navigation.scss",
+		"global/_footer.scss"
+	],
+	"mappings": "AAGA;;;EAGE",
+	"names": []
+}
