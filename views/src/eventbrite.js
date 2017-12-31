@@ -18,5 +18,5 @@ export default class EventBrite {
 	get_my_profile() {
 		return axios.get(`${this.API_ENDPOINT}${this.API_MY_PROFILE}${this.API_TOKEN}`);
 	}
-
+	
 }
