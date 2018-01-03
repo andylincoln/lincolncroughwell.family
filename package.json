@@ -5,7 +5,8 @@
 	"private": true,
 	"scripts": {
 		"start": "node ./bin/www",
-		"dev": "nodemon ./bin/www"
+		"dev": "nodemon ./bin/www",
+		"watch": "gulp watch --babelify"
 	},
 	"main": "app.js",
 	"dependencies": {
