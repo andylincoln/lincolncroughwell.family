@@ -1,4 +1,3 @@
-
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
@@ -11,14 +10,14 @@ const source = require("vinyl-source-stream");
 const buffer = require("vinyl-buffer");
 const uglify = require("gulp-uglify");
 
-const argv = require('yargs').argv; // Gets the arguments that you specifiy when you run gulp
-const isProduction = (argv.production === undefined) ? false : true;
+const argv = require("yargs").argv; // Gets the arguments that you specifiy when you run gulp
+const isProduction = argv.production === undefined ? false : true;
 const isDebug = !isProduction;
-const babelify = (argv.babelify === undefined) ? false : true;
+const babelify = argv.babelify === undefined ? false : true;
 
 const SCSS_DIR = "./public/stylesheets/scss";
 const CSS_DIR = "./public/stylesheets";
-const JS_DIR = "./views/src";
+const JS_DIR = "./client/js";
 
 // Title used for system notifications
 const notifyInfo = {
@@ -35,19 +34,25 @@ const plumberErrorHandler = {
 };
 
 function scss_compile(src, dest, mapsDest) {
-	gulp.src(src)
-	.pipe(plumber(plumberErrorHandler))
-	.pipe(sourcemaps.init())
-	.pipe(sass())
-	.pipe(autoprefixer())
-	.pipe(cleanCSS({
-		debug: isDebug,
-		compatibility: "ie9",
-		inline: ["none"], // disables all inlining,
-		sourceMaps: true,
-	}), function(output) { console.log(output); })
-	.pipe(sourcemaps.write(mapsDest))
-	.pipe(gulp.dest(dest));
+	gulp
+		.src(src)
+		.pipe(plumber(plumberErrorHandler))
+		.pipe(sourcemaps.init())
+		.pipe(sass())
+		.pipe(autoprefixer())
+		.pipe(
+			cleanCSS({
+				debug: isDebug,
+				compatibility: "ie9",
+				inline: ["none"], // disables all inlining,
+				sourceMaps: true
+			}),
+			function(output) {
+				console.log(output);
+			}
+		)
+		.pipe(sourcemaps.write(mapsDest))
+		.pipe(gulp.dest(dest));
 }
 
 /**
@@ -56,7 +61,7 @@ function scss_compile(src, dest, mapsDest) {
  * @param babelify
  * Adds a transpiling step for compilation of ES6+ JavaScript
  */
-gulp.task("scripts", function () {
+gulp.task("scripts", function() {
 	// set up the browserify instance on a task basis
 	const b = browserify({
 		entries: JS_DIR + "/main.js",
@@ -68,42 +73,46 @@ gulp.task("scripts", function () {
 		b.transform("babelify", { presets: ["env"] });
 	}
 
-	return b.bundle()
-		.on("error", notify.onError({
-			message: 'Error: <%= error.message %>'
-		}))
-		.on("error", function (err) {
-			console.error("Error:", err);
-		})
-		.pipe(source("./main.min.js"))
-		.pipe(buffer())
-		.pipe(sourcemaps.init({ loadMaps: true }))
-		// Add transformation tasks to the pipeline here.
-		.pipe(uglify())
-		.pipe(sourcemaps.write("./"))
-		.pipe(gulp.dest("./public/javascripts/"));
+	return (b
+			.bundle()
+			.on(
+				"error",
+				notify.onError({
+					message: "Error: <%= error.message %>"
+				})
+			)
+			.on("error", function(err) {
+				console.error("Error:", err);
+			})
+			.pipe(source("./main.min.js"))
+			.pipe(buffer())
+			.pipe(sourcemaps.init({ loadMaps: true }))
+			// Add transformation tasks to the pipeline here.
+			.pipe(uglify())
+			.pipe(sourcemaps.write("./"))
+			.pipe(gulp.dest("./public/javascripts/")) );
 });
 
 /**
-* @task styles
-* compile all style files from scss to css
-*/
-gulp.task("styles", function () {
+ * @task styles
+ * compile all style files from scss to css
+ */
+gulp.task("styles", function() {
 	gulp.start("theme-styles");
 });
 /**
-* @task theme-styles
-* compile the WordPress theme
-*/
+ * @task theme-styles
+ * compile the WordPress theme
+ */
 gulp.task("theme-styles", function() {
 	scss_compile(SCSS_DIR + "/style.scss", CSS_DIR, "./");
 });
 
 /**
-* @task watch
-* Recompile styles and scripts on file change
-*/
-gulp.task("watch", function () {
+ * @task watch
+ * Recompile styles and scripts on file change
+ */
+gulp.task("watch", function() {
 	gulp.watch([SCSS_DIR + "/**/*.scss"], ["styles"]);
 	gulp.watch([JS_DIR + "/**/*.js"], ["scripts"]);
 });
