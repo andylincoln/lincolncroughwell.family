@@ -1,0 +1,23 @@
+nav.main-navigation {
+	display: block;
+	width: 100%;
+
+	ul {
+		li {
+			display: inline-block;
+		}
+	}
+	a {
+		color: $color-white;
+
+		&:hover,
+		&:active {
+			color: $color-off-white;
+		}
+
+		@media screen and (min-width: $break-desktopSmall) {
+			font-size: 2.1875rem;
+			line-height: 1.08;
+		}
+	}
+}

@@ -20,6 +20,18 @@
 }
 
 html {
+	color: $color-navy-blue;
 	font-size: 16px;
 	transition: 0.2s ease-out font, 0.2s ease-out color;
+}
+
+// Accessibly remove bullets from the lists
+ul,
+ol {
+	li {
+		list-style-type: none; /* remove bullets */
+		&::before {
+			content: "\200B"; /* add zero-width space */
+		}
+	}
 }

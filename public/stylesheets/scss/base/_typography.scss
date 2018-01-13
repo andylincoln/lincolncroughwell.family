@@ -62,44 +62,43 @@ em {
 }
 
 a {
+	color: $color-navy-blue;
+	text-decoration: none;
+
 	&:focus {
 		text-decoration: underline;
 	}
+
 	&:hover,
 	&:active {
 		color: darken($color-copper, 0.1);
+		text-decoration: underline;
 	}
 }
+
 ol {
 	li {
-
 	}
 }
 ul {
 	li {
-		
 	}
 }
 
 pre,
 font {
-	
 }
 
 p {
-
 }
 
 table {
-
-	td, th {
-
+	td,
+	th {
 	}
 	th {
-
 	}
 }
 
 @media (min-width: $break-desktopSmall) {
-
 }

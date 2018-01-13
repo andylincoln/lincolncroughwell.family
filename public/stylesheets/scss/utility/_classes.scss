@@ -1,11 +1,13 @@
 .container {
 	height: 100%;
 	width: 100%;
+	max-width: 1800px;
+	margin: 0 auto;
 }
 
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+	clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
 	position: absolute !important;
 	white-space: nowrap;
 	height: 1px;
@@ -25,5 +27,5 @@
 
 .hidden,
 [hidden] {
-	display: none!important;
+	display: none !important;
 }

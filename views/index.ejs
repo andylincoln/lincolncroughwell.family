@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><%= title %></title>
-		<link rel="dns-prefetch" href="//use.typekit.net">
-		<link rel="dns-prefetch" href="//www.eventbriteapi.com/">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="robots" content="noindex">
-		<link rel="stylesheet" href="/stylesheets/vendor/normalize.css"/>
-		<link rel="stylesheet" href="https://use.typekit.net/ivl3jxo.css">
-		<link rel="stylesheet" href="/stylesheets/style.css" />
-		<script src="/javascripts/main.min.js" async></script>
+		<% include partials/head %>
 	</head>
-	<body>
-		<h1><%= title %></h1>
-		<p>Welcome to <%= title %></p>
-		<p>This site is currently under construction</p>
+	<body class="page-template-homepage">
+		<div class="wrap">
+			<% include partials/header %>
+			<main>
+				<article>
+					<section class="landing-hero">
+						<div class="monogram">
+							<img src="" alt="" />
+						</div>
+						
+						<div class="landing-hero-text">
+							<h1>We’re Saying “I do.”</h1>
+							<p>
+								Lowell, Massachusetts | November 24, 2018
+							</p>
+						</div>
+					</section>
+
+				</article>
+			</main>
+			<% include partials/footer %>
+		</div>
 	</body>
 </html>
