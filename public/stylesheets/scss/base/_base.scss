@@ -15,8 +15,14 @@
 
 //	Text-highlight
 ::selection {
-	/*background: ;
-	color: ;*/
+	background: $color-copper;
+	color: $color-white;
+}
+
+::-moz-selection {
+	background: $color-copper;
+	color: $color-white;
+}
 }
 
 html {
