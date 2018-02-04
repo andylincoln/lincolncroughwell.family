@@ -1,7 +1,22 @@
+article {
+	a {
+		color: $color-white;
+		font-size: 2.1875rem;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: $color-off-white;
+			text-decoration: underline;
+		}
+	}
+}
+
 .landing-hero {
 	position: relative;
 	background-color: $color-navy-blue;
 	color: $color-white;
+	padding: 20px 0 0 0;
 	height: calc(100vh - 200px);
 	text-align: center;
 
@@ -21,4 +36,7 @@
 	&-text {
 		width: 100%;
 	}
+}
+
+section.polaroid {
 }
