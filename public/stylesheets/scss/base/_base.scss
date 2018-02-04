@@ -23,6 +23,9 @@
 	background: $color-copper;
 	color: $color-white;
 }
+
+:focus {
+	outline: 1px solid $color-copper;
 }
 
 html {
