@@ -1,51 +1,25 @@
 {
-	"name": "lincolncroughwell.family",
-	"description": "The wedding website of Andy Lincoln and Sarah Croughwell",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {
-		"start": "node ./bin/www",
-		"dev": "nodemon ./bin/www",
-		"watch": "gulp watch --babelify"
-	},
-	"main": "app.js",
-	"dependencies": {
-		"axios": "0.17.1",
-		"body-parser": "~1.18.2",
-		"cookie-parser": "~1.4.3",
-		"debug": "~2.6.9",
-		"ejs": "~2.5.7",
-		"express": "~4.15.5",
-		"morgan": "~1.9.0",
-		"node-sass-middleware": "0.9.8",
-		"serve-favicon": "~2.4.5"
-	},
-	"devDependencies": {
-		"chai": "*",
-		"mocha": "*",
-		"nodemon": "1.14.6",
-		"babel-core": "6.26.0",
-		"babel-preset-env": "1.6.1",
-		"babelify": "8.0.0",
-		"browserify": "14.5.0",
-		"clean-css": "^4.0.12",
-		"eslint": "^3.19.0",
-		"gulp": "^3.9.1",
-		"gulp-autoprefixer": "^3.1.1",
-		"gulp-clean-css": "^3.0.4",
-		"gulp-cli": "^1.2.2",
-		"gulp-notify": "^2.2.0",
-		"gulp-plumber": "^1.1.0",
-		"gulp-sass": "^3.1.0",
-		"gulp-sourcemaps": "^1.9.1",
-		"gulp-uglify": "3.0.0",
-		"node-sass": "^4.5.2",
-		"uglify": "0.1.5",
-		"vinyl-buffer": "1.0.0",
-		"vinyl-source-stream": "1.1.0",
-		"yargs": "10.0.3"
-	},
-	"engines": {
-		"node": ">=8.9.3"
-	}
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "^1.9.241",
+    "gatsby-link": "^1.6.39",
+    "gatsby-plugin-react-helmet": "^2.0.8",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.11.1"
+  }
 }
