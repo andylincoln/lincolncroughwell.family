@@ -4,9 +4,17 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "1.9.243",
-    "gatsby-link": "1.6.40",
+    "gatsby": "^1.9.243",
+    "gatsby-image": "^1.0.42",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-netlify": "^1.0.19",
+    "gatsby-plugin-postcss-sass": "^1.0.19",
     "gatsby-plugin-react-helmet": "^2.0.8",
+    "gatsby-plugin-sass": "^1.0.25",
+    "gatsby-plugin-sharp": "1.6.41",
+    "gatsby-source-filesystem": "^1.5.27",
+    "gatsby-transformer-sharp": "^1.6.22",
+    "normalize.css": "^8.0.0",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
