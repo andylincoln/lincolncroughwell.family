@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import ThreeCol from '../components/ThreeCol';
 import ImageFeature from '../components/ImageFeature';
 
-const IndexPage = () => (
+const ThingsToDo = () => (
   <div>
     <Hero />
     <ThreeCol />
@@ -12,4 +12,4 @@ const IndexPage = () => (
   </div>
 )
 
-export default IndexPage
+export default ThingsToDo
