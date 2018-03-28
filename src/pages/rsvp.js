@@ -15,5 +15,4 @@ const RSVPPage = () => (
     <Footer />
   </div>
 )
-
 export default RSVPPage
