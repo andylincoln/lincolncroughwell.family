@@ -5,6 +5,10 @@ export default class Nav extends React.Component {
   render() {
     return (
       <nav className="main-navigation">
+          <button className="menu-button">
+            <span className="a11y">Toggle to open or close the menu</span>
+            <div className="icon"></div>
+          </button>
           <ul>
             <li>
               <Link to="/rsvp">RSVP</Link>

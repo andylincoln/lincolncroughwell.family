@@ -18,7 +18,7 @@ const polaroid = {
 }
 
 const IndexPage = () => (
-  <div>
+  <div className="page-template-homepage">
     <Header />
     <FrontPageHero heading="We're saying &ldquo;I Do&rdquo;" subheading="Methuen, Massachusetts | November 24, 2018"/>
     <ThreeCol facebook_url="/" />

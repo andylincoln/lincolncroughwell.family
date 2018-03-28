@@ -25,18 +25,19 @@ article {
 		font-size: 5.125rem;
 		line-height: 1.1;
 	}
+	h2 {
+		color: inherit;
+		width: 100%;
+	}
 	.monogram {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		// position: absolute;
+		// top: 50%;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
 		max-width: 120px;
 		margin: 0 auto;
 	}
-	&-text {
-		width: 100%;
-	}
 }
 
-section.polaroid {
+.polaroid {
 }
