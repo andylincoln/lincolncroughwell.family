@@ -1,9 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import "../scss/main.scss";
 
 const TemplateWrapper = ({ children }) => (
@@ -15,9 +12,7 @@ const TemplateWrapper = ({ children }) => (
         <meta name="robots" content="noindex"/>
         <link rel="stylesheet" href="https://use.typekit.net/ivl3jxo.css"/>
       </Helmet>
-    <Header />  
     {children()}
-    <Footer />  
   </div>
 )
 

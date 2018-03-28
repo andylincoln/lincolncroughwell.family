@@ -1,8 +1,14 @@
 import React from 'react'
 
-const Polaroid = () => (
-  <div>
-  </div>
-)
+export default class Polaroid extends React.Component {
+  render() {
+    return (
+      <div className="polaroid">
 
-export default Polaroid
+      </div>
+    );
+  }
+
+};
+
+// React.propTypes = {};

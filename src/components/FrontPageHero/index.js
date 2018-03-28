@@ -1,8 +1,15 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
-const FrontPageHero = () => (
-	<div >Hero</div>
-);
+export default class FrontPageHero extends React.Component {
 
-export default FrontPageHero
+	render() {
+		return (
+			<div className="front-page-hero">
+				<h1>{this.props.heading}</h1>
+				<h2>{this.props.subheading}</h2>
+			</div>
+		);
+	}
+}
+
+

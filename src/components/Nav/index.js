@@ -1,26 +1,28 @@
 import React from 'react'
 import Link from 'gatsby-link';
 
-const Nav = () => (
-  <nav class="main-navigation">
-      <ul>
-        <li>
-          <Link to="/">RSVP</Link>
-        </li>
-        <li>
-          <Link to="/">Wedding Details</Link>
-        </li>
-        <li>
-          <Link to="/">Registry</Link>
-        </li>
-        <li>
-          <Link to="/">Our Story</Link>
-        </li>
-        <li>
-          <Link to="/">Around Lowell</Link>
-        </li>
-      </ul>
-    </nav>
-)
-
-export default Nav
+export default class Nav extends React.Component {
+  render() {
+    return (
+      <nav className="main-navigation">
+          <ul>
+            <li>
+              <Link to="/rsvp">RSVP</Link>
+            </li>
+            <li>
+              <Link to="/wedding-details">Wedding Details</Link>
+            </li>
+            <li>
+              <Link to="/registry">Registry</Link>
+            </li>
+            <li>
+              <Link to="/our-story">Our Story</Link>
+            </li>
+            <li>
+              <Link to="/things-to-do">Around Lowell</Link>
+            </li>
+          </ul>
+        </nav>
+    );
+  }
+}
