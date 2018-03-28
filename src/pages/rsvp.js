@@ -6,8 +6,8 @@ import ImageFeature from '../components/ImageFeature';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const ThingsToDo = () => (
-  <div>
+const RSVPPage = () => (
+	<div>
     <Header />
     <Hero />
     <Polaroid />
@@ -16,4 +16,4 @@ const ThingsToDo = () => (
   </div>
 )
 
-export default ThingsToDo
+export default RSVPPage

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link';
 
-export default class Nav extends React.Component {
+export default class FrontPageNav extends React.Component {
   render() {
     return (
       <nav className="main-navigation">
@@ -10,9 +10,6 @@ export default class Nav extends React.Component {
             <div className="icon"></div>
           </button>
           <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
             <li>
               <Link to="/rsvp">RSVP</Link>
             </li>

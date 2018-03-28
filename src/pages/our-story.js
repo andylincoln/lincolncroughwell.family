@@ -6,7 +6,7 @@ import ImageFeature from '../components/ImageFeature';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const ThingsToDo = () => (
+const OurStoryPage = () => (
   <div>
     <Header />
     <Hero />
@@ -16,4 +16,4 @@ const ThingsToDo = () => (
   </div>
 )
 
-export default ThingsToDo
+export default OurStoryPage
