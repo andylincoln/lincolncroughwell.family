@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const Footer = () => (
-  <footer>
+  <footer className="site-footer">
     <div className="footer-col">
       <h3>Any Questions?</h3>
       <form className="contact-form">
@@ -74,7 +74,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="footer-bottom">
-      <span>Created by Sarah and Andy with Love</span>
+      <span>Created by Sarah and Andy with love</span>
     </div>
   </footer>
 );

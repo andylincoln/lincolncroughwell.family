@@ -1,9 +1,11 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "lincolncroughwell.family",
+  "description": "Lincoln Croughwell Wedding Site",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Andy Lincoln <andy@andylincoln.io>",
   "dependencies": {
+    "babel-core": "6.26.0",
+    "cheerio": "1.0.0-rc.2",
     "gatsby": "^1.9.243",
     "gatsby-image": "^1.0.42",
     "gatsby-link": "^1.6.40",
@@ -25,9 +27,40 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "devDependencies": {
+    "babel-jest": "22.4.3",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-15": "1.0.5",
+    "react-test-renderer": "15.6.1",
+    "jest": "22.4.3",
+    "jest-enzyme": "6.0.0",
     "prettier": "^1.11.1"
+  },
+  "jest": {
+    "transform": {
+      ".(js|jsx)": "babel-jest"
+    },
+    "testEnvironment": "enzyme",
+    "testEnvironmentOptions": {
+      "enzymeAdapter": "react15"
+    },
+    "testRegex": "(\\.(test|spec))\\.(jsx|js)$",
+    "setupTestFrameworkScriptFile": "<rootDir>/jest-setup.js",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.cache/"
+    ],
+    "moduleFileExtensions": [
+      "jsx",
+      "js"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "html"
+    ]
   }
 }
