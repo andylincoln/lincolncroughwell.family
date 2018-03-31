@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+// TODO Make the social media link data come in from GraphQL if needed elsewhere
 const Footer = () => (
   <footer className="site-footer">
     <div className="footer-col">
@@ -24,15 +25,13 @@ const Footer = () => (
           </label>
         </fieldset>
         <fieldset>
-          <button type="submit">
-          Send
-          </button>
+          <button type="submit">Send</button>
         </fieldset>
       </form>
     </div>
     <div className="footer-col">
       <h3>Find us Online</h3>
-      <div className="wrap">
+      <div className="social-media wrap">
         <div className="social-media-andy">
           <h6>Connect with Andy</h6>
           <ul>

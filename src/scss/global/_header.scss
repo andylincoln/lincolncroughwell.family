@@ -1,12 +1,11 @@
 header.site-header {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 1;
 
 	@media screen and (min-width: $break-desktopSmall) {
 		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 1;
 	}
 }
 

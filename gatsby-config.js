@@ -2,25 +2,26 @@ const autoprefixer = require("autoprefixer");
 
 module.exports = {
   siteMetadata: {
-    title: 'Lincoln Croughwell Wedding',
+	title: 'Lincoln Croughwell Wedding',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "img",
-        path: `${__dirname}/src/images`
-      }
-    },
-    // {
+	'gatsby-plugin-react-helmet',
+	{
+	  resolve: "gatsby-source-filesystem",
+	  options: {
+		name: "img",
+		path: `${__dirname}/src/images`
+	  }
+	},
+	// {
 		// 	resolve: "gatsby-source-filesystem",
 		// 	options: {
 		// 		name: "img",
 		// 		path: `${__dirname}/static/assets`
 		// 	}
 		// },
-    {
+
+	{
 			resolve: `gatsby-plugin-postcss-sass`,
 			options: {
 				postCssPlugins: [autoprefixer()]
@@ -28,6 +29,12 @@ module.exports = {
 		},
 		"gatsby-transformer-sharp",
 		"gatsby-plugin-sharp",
+		{
+			resolve: 'gatsby-plugin-react-svg',
+			options: {
+					include: "src/svg/*.svg"
+			}
+		},
 		// Netlify must be last
 		{
 			resolve: `gatsby-plugin-netlify`,
