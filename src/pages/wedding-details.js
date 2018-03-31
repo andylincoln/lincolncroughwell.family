@@ -10,7 +10,6 @@ const WeddingDetailsPage = () => (
     <Header />
     <Hero />
     <Polaroid />
-    <ImageFeature />
     <Footer />
   </div>
 )
