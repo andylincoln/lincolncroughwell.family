@@ -13,6 +13,12 @@ nav.main-navigation {
 		background: $color-navy-blue-2;
 		margin: 0;
 		padding: 20px;
+
+		@media screen and (min-width: $break-desktopSmall) {
+			background: none;
+			position: static;
+		}
+
 		li {
 			display: inline-block;
 		}
