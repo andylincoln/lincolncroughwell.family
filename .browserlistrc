@@ -1,14 +1,8 @@
 [production]
-> 2%
+> 5%
 Last 2 versions
 iOS 8
-
-[development]
-last 2 versions
-[production]
-> 2%
-Last 2 versions
-iOS 8
+IE 11
 
 [development]
 last 2 versions
