@@ -20,7 +20,7 @@ const polaroid = {
 const IndexPage = () => (
   <div className="front-page">
     <Header front_page={true} />
-    <FrontPageHero heading="We're saying &ldquo;I Do&rdquo;" subheading="Methuen, Massachusetts | November 24, 2018"/>
+    <FrontPageHero heading="We're saying &ldquo;I Do&rdquo;" subheading={`Methuen, Massachusetts November 24, 2018`}/>
     <ThreeCol facebook_url="/" />
     <Polaroid {...polaroid }/>
     <Footer />
