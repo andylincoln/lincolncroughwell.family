@@ -2,78 +2,78 @@
 // h1-h6 styles, p tags, lists, etc
 
 body {
-	color: $color-black;
-	font-family: $font-global;
-	font-size: 16px;
-	line-height: 1.5625; // 25 / 16
-	transition: 0.2s font, 0.2s color;
+  color: $color-black;
+  font-family: $font-global;
+  font-size: 16px;
+  line-height: 1.5625; // 25 / 16
+  transition: 0.2s font, 0.2s color;
 }
 
 h1,
 .h1 {
-	color: $color-black;
-	font-family: $font-abril-fatface;
-	font-size: 2.5rem;
-	font-style: italic;
-	font-weight: normal;
+  color: $color-black;
+  font-family: $font-abril-fatface;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: normal;
 }
 
 h2,
 .h2 {
-	color: $color-black;
-	font-family: $font-mr-eaves-modern;
-	font-size: 2.1875rem;
-	text-transform: uppercase;
+  color: $color-black;
+  font-family: $font-mr-eaves-modern;
+  font-size: 2.1875rem;
+  text-transform: uppercase;
 }
 
 h3,
 .h3 {
-	color: $color-black;
-	font-family: $font-abril-fatface;
-	font-size: 1.875rem;
+  color: $color-black;
+  font-family: $font-abril-fatface;
+  font-size: 1.875rem;
 }
 
 h4,
 .h4 {
-	color: $color-black;
-	font-family: $font-mr-eaves-modern;
-	font-size: 2rem;
+  color: $color-black;
+  font-family: $font-mr-eaves-modern;
+  font-size: 2rem;
 }
 
 h5,
 .h5 {
-	color: $color-black;
-	font-family: $font-mr-eaves-modern;
-	font-size: 1.25rem;
+  color: $color-black;
+  font-family: $font-mr-eaves-modern;
+  font-size: 1.25rem;
 }
 
 h6,
 .h6 {
-	color: $color-black;
-	font-family: $font-mr-eaves-modern;
+  color: $color-black;
+  font-family: $font-mr-eaves-modern;
 }
 
 strong {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 em {
-	font-style: italic;
+  font-style: italic;
 }
 
 a {
-	color: $color-navy-blue;
-	text-decoration: none;
+  color: $color-navy-blue;
+  text-decoration: none;
 
-	&:focus {
-		text-decoration: underline;
-	}
+  &:focus {
+    text-decoration: underline;
+  }
 
-	&:hover,
-	&:active {
-		color: darken($color-copper, 0.1);
-		text-decoration: underline;
-	}
+  &:hover,
+  &:active {
+    color: darken($color-copper, 0.1);
+    text-decoration: underline;
+  }
 }
 
 
@@ -81,19 +81,19 @@ a {
 // button,
 // [type='button'],
 // [type='submit'] {
-// 	appearance: none;
-// 	border: 1px solid black;
-// 	background: $color-white;
+//   appearance: none;
+//   border: 1px solid black;
+//   background: $color-white;
 // }
 
 
 // ol {
-// 	li {
-// 	}
+//   li {
+//   }
 // }
 // ul {
-// 	li {
-// 	}
+//   li {
+//   }
 // }
 
 // pre,
@@ -104,11 +104,11 @@ a {
 // }
 
 // table {
-// 	td,
-// 	th {
-// 	}
-// 	th {
-// 	}
+//   td,
+//   th {
+//   }
+//   th {
+//   }
 // }
 
 @media (min-width: $break-desktopSmall) {

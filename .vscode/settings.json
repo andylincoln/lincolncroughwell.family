@@ -1,0 +1,6 @@
+{
+	"editor.renderWhitespace": "all",
+    "editor.tabCompletion": true,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+}

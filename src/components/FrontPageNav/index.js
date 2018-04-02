@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link';
 
-import MenuIcon from '-!svg-react-loader?name=MenuIcon!../../svg/icon-menu.svg';
+import Icon from "../Icon/";
+import MenuIcon from "../Icon/MenuIcon";
 
 export default class FrontPageNav extends React.Component {
 
@@ -19,7 +20,8 @@ export default class FrontPageNav extends React.Component {
       <nav className="main-navigation main-navigation--front-page">
           <button className="menu-button" aria-expanded="false" >
             <span className="a11y">Toggle to open or close the menu</span>
-            <MenuIcon className="menu-icon"/>
+            {/* <Icon name="menu" /> */}
+            <MenuIcon/>
           </button>
           <ul className="menu">
             <li>

@@ -29,12 +29,6 @@ module.exports = {
 		},
 		"gatsby-transformer-sharp",
 		"gatsby-plugin-sharp",
-		{
-			resolve: 'gatsby-plugin-react-svg',
-			options: {
-					include: "src/svg/*.svg"
-			}
-		},
 		// Netlify must be last
 		{
 			resolve: `gatsby-plugin-netlify`,

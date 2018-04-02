@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 
-import FrontPageFrontPageNav from './index';
+import FrontPageNav from './index';
 
 describe('FrontPageNav Component', function() {
   const nav = shallow(<FrontPageNav />);

@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const RSVPPage = () => (
-	<div>
+  <div>
     <Header />
     <Hero />
     <Polaroid />
