@@ -3,15 +3,18 @@ import React from 'react';
 export default class MenuIcon extends React.Component {
   render() {
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2308 28 25 22.756" className="icon icon-menu">
+      <svg
+        className="icon icon-menu"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 50 50"
+      >
         <title>Menu</title>
-        <g transform="translate(-2328 4)">
-          <rect width="25" height="4.79" transform="translate(20 24)"/>
-          <rect width="25" height="4.79" transform="translate(20 32.983)"/>
-          <rect width="25" height="4.79" transform="translate(20 41.966)"/>
+        <g transform="translate(0 -7.5 )">
+          <rect width="50" height="8" transform="translate(0 15)" />
+          <rect width="50" height="8" transform="translate(0 30)" />
+          <rect width="50" height="8" transform="translate(0 45)" />
         </g>
       </svg>
     );
   }
-
 }
