@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const RegistryPage = () => (
-	<div>
+  <div>
     <Header />
     <Hero />
     <Polaroid />

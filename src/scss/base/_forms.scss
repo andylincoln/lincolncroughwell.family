@@ -1,81 +1,81 @@
 .hide-robot {
-	display: none;
+  display: none;
 }
 
 fieldset {
-	border: none;
-	padding: 0;
+  border: none;
+  padding: 0;
 }
 
 form {
-	margin: -12.5px auto;
-	label {
-		display: block;
-		color: $color-white;
-		font-family: $font-global;
-		font-size: 2.1875rem;
-		line-height: 1.08;
-		margin: 12.5px auto;
-		max-width: 600px;
+  margin: -12.5px auto;
+  label {
+    display: block;
+    color: $color-white;
+    font-family: $font-global;
+    font-size: 2.1875rem;
+    line-height: 1.08;
+    margin: 12.5px auto;
+    max-width: 600px;
 
-		span {
-			display: block;
-		}
-	}
+    span {
+      display: block;
+    }
+  }
 }
 
 input[type="text"],
 input[type="email"] {
-	font-size: 1rem;
-	line-height: 2;
-	padding: 0 0.5em;
-	width: 100%;
+  font-size: 1rem;
+  line-height: 2;
+  padding: 0 0.5em;
+  width: 100%;
 
-	&:focus {
-		outline: 1px solid $color-copper;
-		outline-offset: 4px;
-	}
+  &:focus {
+    outline: 1px solid $color-copper;
+    outline-offset: 4px;
+  }
 }
 
 [type="submit"] {
-	display: block;
-	cursor: pointer;
-	border: 1px solid $color-white;
-	border-radius: 6px;
-	background: transparent;
-	color: $color-white;
-	font-size: 1.5rem;
-	text-transform: uppercase;
-	padding: 10px 20px;
-	margin: 12.5px auto;
-	width: 100%;
-	max-width: 600px;
-	transition: 0.2s all ease-out;
+  display: block;
+  cursor: pointer;
+  border: 1px solid $color-white;
+  border-radius: 6px;
+  background: transparent;
+  color: $color-white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin: 12.5px auto;
+  width: 100%;
+  max-width: 600px;
+  transition: 0.2s all ease-out;
 
-	@media screen and (min-width: $break-desktopSmall) {
-		font-size: 2.1875rem;
-	}
+  @media screen and (min-width: $break-desktopSmall) {
+    font-size: 2.1875rem;
+  }
 
-	&:hover,
-	&:focus {
-		color: $color-navy-blue;
-		background: $color-white;
-	}
+  &:hover,
+  &:focus {
+    color: $color-navy-blue;
+    background: $color-white;
+  }
 
-	&:focus {
-		outline: 1px solid $color-copper;
-		outline-offset: 4px;
-	}
+  &:focus {
+    outline: 1px solid $color-copper;
+    outline-offset: 4px;
+  }
 }
 
 textarea {
-	font-size: 1rem;
-	line-height: 2;
-	resize: none;
-	width: 100%;
+  font-size: 1rem;
+  line-height: 2;
+  resize: none;
+  width: 100%;
 
-	&:focus {
-		outline: 1px solid $color-copper;
-		outline-offset: 4px;
-	}
+  &:focus {
+    outline: 1px solid $color-copper;
+    outline-offset: 4px;
+  }
 }

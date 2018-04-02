@@ -1,112 +1,112 @@
 .site-footer {
-	color: $color-white;
-	background: $color-navy-blue;
+  color: $color-white;
+  background: $color-navy-blue;
 
-	h3 {
-		color: $color-white;
-		font-family: $font-title;
-		line-height: 1.1;
-		font-weight: normal;
-		margin-bottom: 20px;
-		text-align: center;
-		@media screen and (min-width: $break-desktopSmall) {
-			text-align: left;
-		}
-	}
+  h3 {
+    color: $color-white;
+    font-family: $font-title;
+    line-height: 1.1;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: center;
+    @media screen and (min-width: $break-desktopSmall) {
+      text-align: left;
+    }
+  }
 
-	h6 {
-		color: $color-white;
-		font-family: $font-global;
-		font-size: 2.1875rem;
-		line-height: 1.08;
-		font-weight: normal;
-		margin-bottom: 10px;
-	}
+  h6 {
+    color: $color-white;
+    font-family: $font-global;
+    font-size: 2.1875rem;
+    line-height: 1.08;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
 
-	a {
-		color: $color-white;
-		font-size: 1.5rem;
-		line-height: 1;
+  a {
+    color: $color-white;
+    font-size: 1.5rem;
+    line-height: 1;
 
-		&:hover,
-		&:focus,
-		&:active {
-			color: $color-white;
-			text-decoration: underline;
-		}
-		@media screen and (min-width: $break-desktopSmall) {
-			font-size: 2.1875rem;
-			line-height: 1.08;
-		}
-	}
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-white;
+      text-decoration: underline;
+    }
+    @media screen and (min-width: $break-desktopSmall) {
+      font-size: 2.1875rem;
+      line-height: 1.08;
+    }
+  }
 
-	ul {
-		padding: 0;
-		li {
-		}
-	}
+  ul {
+    padding: 0;
+    li {
+    }
+  }
 
-	div.contact-form {
-		margin: 0 auto;
-		width: 100%;
-		max-width: calc(100% - 20px);
+  div.contact-form {
+    margin: 0 auto;
+    width: 100%;
+    max-width: calc(100% - 20px);
 
-		@media screen and (min-width: $break-desktopSmall) {
-			max-width: 425px;
-		}
-	}
+    @media screen and (min-width: $break-desktopSmall) {
+      max-width: 425px;
+    }
+  }
 
-	.social-media {
-		.wrap {
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: space-between;
-			align-items: baseline;
-		}
-	}
+  .social-media {
+    .wrap {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
 
-	.footer-split {
-		margin: 25px auto;
-		width: 100%;
-		max-width: calc(100% - 20px);
-		padding: 0;
+  .footer-split {
+    margin: 25px auto;
+    width: 100%;
+    max-width: calc(100% - 20px);
+    padding: 0;
 
-		@media screen and (min-width: $break-desktopSmall) {
-			margin: 0 auto;
-			flex: 0 1 50%;
-			padding: 0 25px;
-			width: 50%;
-		}
-	}
+    @media screen and (min-width: $break-desktopSmall) {
+      margin: 0 auto;
+      flex: 0 1 50%;
+      padding: 0 25px;
+      width: 50%;
+    }
+  }
 
-	.footer-top {
-		position: relative;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-		align-items: baseline;
-		padding: 0 25px;
+  .footer-top {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 25px;
 
-		@media screen and (min-width: $break-desktopSmall) {
-			padding: 50px 12.5px;
+    @media screen and (min-width: $break-desktopSmall) {
+      padding: 50px 12.5px;
 
-			&::after {
-				position: absolute;
-				top: 50px;
-				left: 50%;
-				bottom: 50px;
-				transform: translateX(-50%);
-				display: block;
-				// content: "";
-				background: $color-white;
-				width: 2px;
-			}
-		}
-	}
+      &::after {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        bottom: 50px;
+        transform: translateX(-50%);
+        display: block;
+        // content: "";
+        background: $color-white;
+        width: 2px;
+      }
+    }
+  }
 
-	.footer-bottom {
-		display: block;
-		text-align: center;
-		width: 100%;
-	}
+  .footer-bottom {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
 }

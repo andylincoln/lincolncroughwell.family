@@ -1,16 +1,16 @@
 header.site-header {
 
-	@media screen and (min-width: $break-desktopSmall) {
-		position: fixed;
-		top: 0;
-		right: 0;
-		left: 0;
-		z-index: 1;
-	}
+  @media screen and (min-width: $break-desktopSmall) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
 }
 
 .front-page {
-	header.site-header {
-		background: $color-navy-blue;
-	}
+  header.site-header {
+    background: $color-navy-blue;
+  }
 }
