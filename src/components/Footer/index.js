@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
 
 // TODO Make the social media link data come in from GraphQL if needed elsewhere
 const Footer = () => (
@@ -13,7 +13,13 @@ const Footer = () => (
           </label>
           <label>
             <span>Name</span>
-            <input type="text" className="email" name="name" value="" required />
+            <input
+              type="text"
+              className="email"
+              name="name"
+              value=""
+              required
+            />
           </label>
           <label>
             <span>Email</span>
@@ -21,7 +27,7 @@ const Footer = () => (
           </label>
           <label>
             <span>Message</span>
-            <textarea className="message" required></textarea>
+            <textarea className="message" required />
           </label>
         </fieldset>
         <fieldset>
@@ -36,14 +42,21 @@ const Footer = () => (
           <h6>Connect with Andy</h6>
           <ul>
             <li>
-              <span className="icon">
-              </span>
-              <a href="https://www.instagram.com/andy_lincoln" target="_blank" rel="noreferrer noopener">
+              <span className="icon" />
+              <a
+                href="https://www.instagram.com/andy_lincoln"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 @andy_lincoln
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/andylincoln11" target="_blank" rel="noreferrer noopener">
+              <a
+                href="https://www.facebook.com/andylincoln11"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 facebook.com/andylincoln11
               </a>
             </li>
@@ -53,18 +66,22 @@ const Footer = () => (
           <h6>Connect with Sarah</h6>
           <ul>
             <li>
-              <span className="icon">
-              
-              </span>
-              <a href="https://www.instagram.com/sarahcroughwell" target="_blank" rel="noreferrer noopener">
+              <span className="icon" />
+              <a
+                href="https://www.instagram.com/sarahcroughwell"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 @sarahcroughwell
               </a>
             </li>
             <li>
-              <span className="icon">
-              
-              </span>
-              <a href="https://www.facebook.com/sarah.croughwell" target="_blank" rel="noreferrer noopener">
+              <span className="icon" />
+              <a
+                href="https://www.facebook.com/sarah.croughwell"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 facebook.com/sarah.croughwell
               </a>
             </li>
@@ -73,9 +90,9 @@ const Footer = () => (
       </div>
     </div>
     <div className="footer-bottom">
-      <span>Created by Sarah and Andy with love</span>
+      <span className="colophon">Created by Sarah and Andy with love</span>
     </div>
   </footer>
 );
 
-export default Footer
+export default Footer;

@@ -1,6 +1,12 @@
 .site-footer {
   color: $color-white;
-  background: $color-navy-blue;
+  background: left top/50%
+    url('../static/backgrounds/black_watch_tartan_pattern.svg') repeat;
+  background-color: $color-navy-blue;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 
   h3 {
     color: $color-white;
@@ -65,8 +71,9 @@
     }
   }
 
-  .footer-split {
+  .footer-col {
     margin: 25px auto;
+    flex: 1 1 auto;
     width: 100%;
     max-width: calc(100% - 20px);
     padding: 0;
@@ -76,6 +83,7 @@
       flex: 0 1 50%;
       padding: 0 25px;
       width: 50%;
+      max-width: 500px;
     }
   }
 
@@ -108,5 +116,9 @@
     display: block;
     text-align: center;
     width: 100%;
+  }
+  .colophon {
+    font-style: italic;
+    font-size: 1.125rem;
   }
 }

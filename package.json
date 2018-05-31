@@ -7,6 +7,7 @@
     "babel-core": "6.26.0",
     "cheerio": "1.0.0-rc.2",
     "gatsby": "^1.9.243",
+    "gatsby-cli": "1.1.56",
     "gatsby-image": "^1.0.42",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-netlify": "^1.0.19",
