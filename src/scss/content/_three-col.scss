@@ -1,0 +1,39 @@
+// _three-col.scss
+
+.three-col {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background: left top/50%
+    url('../static/backgrounds/black_watch_tartan_pattern.svg') repeat;
+  background-color: $color-navy-blue;
+
+  @media screen and (min-width: $break-tabletSmall) {
+    flex-flow: row wrap;
+  }
+  & .col {
+    a {
+      display: block;
+      color: $color-white;
+      font-size: 1.25rem;
+      margin: 0.5rem auto;
+      @media screen and (min-width: $break-desktopSmall) {
+        font-size: 2.1875rem;
+      }
+    }
+    .link-text {
+      display: block;
+      margin: 0.5em;
+    }
+    .icon {
+      display: block;
+      fill: $color-white;
+      stroke: $color-white;
+      max-height: 50px;
+      @media screen and (min-width: $break-desktopSmall) {
+        max-height: 100px;
+      }
+    }
+  }
+}
