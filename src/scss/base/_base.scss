@@ -40,7 +40,15 @@ ol {
   li {
     list-style-type: none; /* remove bullets */
     &::before {
-      content: "\200B"; /* add zero-width space */
+      content: '\200B'; /* add zero-width space */
     }
   }
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
 }

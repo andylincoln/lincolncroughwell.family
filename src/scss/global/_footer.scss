@@ -1,7 +1,7 @@
 .site-footer {
   color: $color-white;
-  background: left top/50%
-    url('../static/backgrounds/black_watch_tartan_pattern.svg') repeat;
+  background: left top/cover url('../static/backgrounds/monogram_tartan@2x.png')
+    repeat;
   background-color: $color-navy-blue;
   display: flex;
   flex-flow: row wrap;

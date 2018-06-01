@@ -5,12 +5,19 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  background: left top/50%
-    url('../static/backgrounds/black_watch_tartan_pattern.svg') repeat;
+  background: left top/cover url('../static/backgrounds/monogram_tartan@2x.png')
+    repeat;
   background-color: $color-navy-blue;
+  padding: 1rem 0;
 
-  @media screen and (min-width: $break-tabletSmall) {
+  @media screen and (min-width: $break-mobileLarge) {
     flex-flow: row wrap;
+  }
+  @media screen and (min-width: $break-tabletSmall) {
+    padding: 2rem 0;
+  }
+  @media screen and (min-width: $break-desktopMedium) {
+    padding: 4rem 0;
   }
   & .col {
     a {
@@ -18,7 +25,7 @@
       color: $color-white;
       font-size: 1.25rem;
       margin: 0.5rem auto;
-      @media screen and (min-width: $break-desktopSmall) {
+      @media screen and (min-width: $break-desktopMedium) {
         font-size: 2.1875rem;
       }
     }
@@ -31,7 +38,7 @@
       fill: $color-white;
       stroke: $color-white;
       max-height: 50px;
-      @media screen and (min-width: $break-desktopSmall) {
+      @media screen and (min-width: $break-desktopMedium) {
         max-height: 100px;
       }
     }
