@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
 import Hero from '../components/Hero';
 import Polaroid from '../components/Polaroid';
 import Header from '../components/Header';
@@ -9,9 +9,9 @@ const ThingsToDo = () => (
   <div>
     <Header />
     <Hero />
-    <Polaroid />
+    {/* <Polaroid /> */}
     <Footer />
   </div>
-)
+);
 
-export default ThingsToDo
+export default ThingsToDo;

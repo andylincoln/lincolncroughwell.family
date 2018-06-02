@@ -9,7 +9,7 @@ const OurStoryPage = () => (
   <div>
     <Header />
     <Hero />
-    <Polaroid />
+    {/* <Polaroid /> */}
     <Footer />
   </div>
 )
