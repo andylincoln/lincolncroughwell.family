@@ -6,7 +6,13 @@ const Footer = () => (
   <footer className="site-footer">
     <div className="footer-col">
       <h3>Any Questions?</h3>
-      <form className="contact-form">
+      <form
+        className="contact-form"
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
         <fieldset>
           <label className="hide-robot">
             <input name="firstname" type="text" id="firstname" />
@@ -27,7 +33,7 @@ const Footer = () => (
           </label>
           <label>
             <span>Message</span>
-            <textarea className="message" required />
+            <textarea className="message" name="message" required />
           </label>
         </fieldset>
         <fieldset>
