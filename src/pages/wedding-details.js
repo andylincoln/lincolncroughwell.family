@@ -9,9 +9,9 @@ const WeddingDetailsPage = () => (
   <div>
     <Header />
     <Hero />
-    <Polaroid />
+    {/* <Polaroid /> */}
     <Footer />
   </div>
-)
+);
 
-export default WeddingDetailsPage
+export default WeddingDetailsPage;
