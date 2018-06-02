@@ -14,22 +14,19 @@ const Footer = () => (
         data-netlify-honeypot="bot-field"
       >
         <fieldset>
-          <label className="hide-robot">
-            <input name="firstname" type="text" id="firstname" />
-          </label>
           <label>
             <span>Name</span>
-            <input
-              type="text"
-              className="email"
-              name="name"
-              value=""
-              required
-            />
+            <input type="text" className="name" name="name" value="" required />
           </label>
           <label>
             <span>Email</span>
-            <input type="email" className="email" name="" value="" required />
+            <input
+              type="email"
+              className="email"
+              name="email"
+              value=""
+              required
+            />
           </label>
           <label>
             <span>Message</span>
