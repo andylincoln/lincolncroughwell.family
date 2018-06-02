@@ -8,6 +8,8 @@ import ThreeCol from '../components/ThreeCol';
 import Polaroid from '../components/Polaroid';
 import image from '../static/andy_sarah_engagement_portrait.jpg';
 import image2x from '../static/andy_sarah_engagement_portrait@2x.jpg';
+import auditorium from '../static/Lowell_Memorial_Auditorium_main_entrance;_Lowell@2x.jpg';
+import icc_hotel_image from '../static/umass-lowell-inn-and-conference-center-18.jpg';
 
 const polaroid_announcement = {
   image: {
@@ -27,8 +29,8 @@ const polaroid_announcement = {
 };
 const polaroid_location = {
   image: {
-    src: image2x,
-    src2x: image2x,
+    src: auditorium,
+    src2x: auditorium,
     alt: '',
   },
   icon: 'location',
@@ -43,9 +45,10 @@ const polaroid_location = {
   texture: 'monogram',
 };
 const polaroid_accomodations = {
+  theme: 'dark',
   image: {
-    src: image2x,
-    src2x: image2x,
+    src: icc_hotel_image,
+    src2x: icc_hotel_image,
     alt: '',
   },
   icon: 'hotel',
