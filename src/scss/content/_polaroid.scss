@@ -9,6 +9,17 @@
 
   @media screen and (min-width: $break-desktopSmall) {
   }
+  &.fern {
+    background: left bottom/contain url('../images/svg/fern.svg') repeat;
+  }
+  &.dark {
+    color: $color-white;
+    background-color: $color-navy-blue;
+  }
+  &.light {
+    color: $color-navy-blue;
+    background-color: $color-white;
+  }
   &.left {
     @media screen and (min-width: $break-desktopSmall) {
       flex-direction: row-reverse;
@@ -73,7 +84,7 @@
   }
 
   &--heading {
-    color: $color-navy-blue;
+    color: inherit;
     text-align: center;
     font-size: 1.875rem;
     font-weight: normal;

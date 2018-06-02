@@ -3,7 +3,36 @@
   background-color: $color-navy-blue;
   color: $color-white;
   padding: 100px 30px 50px 30px;
-  text-align: center;  
+  text-align: center;
+
+  &::before {
+    display: block;
+    content: '';
+    background: left bottom/auto 75% url('../images/svg/fern.svg') no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  &::after {
+    display: block;
+    content: '';
+    background: right top/auto 75% url('../images/svg/fern.svg') no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
 }
 
 .front-page-hero--heading {
@@ -15,7 +44,7 @@
   }
 }
 
-.front-page-hero--subheading{
+.front-page-hero--subheading {
   color: inherit;
   width: 100%;
   font-size: 1.3125rem;
