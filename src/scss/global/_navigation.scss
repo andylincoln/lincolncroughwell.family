@@ -2,25 +2,32 @@ nav.main-navigation {
   display: block;
   width: 100%;
   background: none;
+
   ul.menu {
     display: none;
-    position: absolute;
+    position: fixed;
     left: -100%;
     top: 0;
+    height: 100vh;
     width: 100%;
     will-change: left;
     transition: ease-in 0.2s left;
     background: $color-navy-blue-2;
     margin: 0;
     padding: 20px;
+    z-index: 1;
 
     @media screen and (min-width: $break-desktopSmall) {
       background: none;
       position: static;
+      height: auto;
     }
 
     li {
-      display: inline-block;
+      display: block;
+      @media screen and (min-width: $break-desktopSmall) {
+        display: inline-block;
+      }
     }
   }
   a {
@@ -40,16 +47,32 @@ nav.main-navigation {
     background: none;
     max-height: 50px;
     max-width: 50px;
+    svg.icon {
+      pointer-events: none;
+      max-height: 50px;
+      max-width: 50px;
+    }
+    svg.icon-menu {
+      display: block;
+    }
+    svg.icon-close {
+      display: none;
+      width: 50px;
+    }
     &[aria-expanded="true"] {
-      svg.menu-button {
-        .a {
-          fill: red;
-        }
+      position: absolute;
+      left: auto;
+      right: 20px;
+      z-index: 2;
+      svg.icon-close {
+        display: block;
+      }
+      svg.icon-menu {
+        display: none;
       }
     }
     &[aria-expanded="false"] + .menu {
       display: none;
-
       @media screen and (min-width: $break-desktopSmall) {
         display: block;
       }
@@ -58,6 +81,7 @@ nav.main-navigation {
     &[aria-expanded="true"] + .menu {
       display: block;
       left: 0;
+      z-index: 1;
     }
 
     @media screen and (min-width: $break-desktopSmall) {
