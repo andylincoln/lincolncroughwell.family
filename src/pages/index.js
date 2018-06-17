@@ -74,7 +74,7 @@ const IndexPage = () => (
       heading="We're saying &ldquo;I Do&rdquo;"
       subheading={`Methuen, Massachusetts November 24, 2018`}
     />
-    <ThreeCol facebook_url="/" />
+    <ThreeCol facebook_url="https://www.facebook.com/groups/lincolncroughwellwedding/" />
     <Polaroid {...polaroid_announcement} />
     <Polaroid {...polaroid_location} />
     <Polaroid {...polaroid_accomodations} />
