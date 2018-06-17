@@ -6,7 +6,6 @@
   text-align: center;
 
   &::before {
-    display: block;
     content: '';
     background: left bottom/auto 75% url('../images/svg/fern.svg') no-repeat;
     height: 100%;
@@ -20,18 +19,21 @@
     z-index: 0;
   }
   &::after {
-    display: block;
-    content: '';
-    background: right top/auto 75% url('../images/svg/fern.svg') no-repeat;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 0;
+    display: none;
+    @media screen and (min-width: $break-desktopSmall) {
+      display: block;
+      content: '';
+      background: right top/auto 75% url('../images/svg/fern.svg') no-repeat;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
   }
 }
 
