@@ -16,7 +16,7 @@ const Footer = () => (
         <fieldset>
           <label>
             <span>Name</span>
-            <input type="text" className="name" name="name" value="" required />
+            <input type="text" className="name" name="name" required />
           </label>
           <label>
             <span>Email</span>
@@ -24,7 +24,6 @@ const Footer = () => (
               type="email"
               className="email"
               name="email"
-              value=""
               required
             />
           </label>
