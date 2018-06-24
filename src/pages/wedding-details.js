@@ -6,12 +6,14 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const WeddingDetailsPage = () => (
-  <div>
-    <Header />
-    <Hero />
-    {/* <Polaroid /> */}
-    <Footer />
-  </div>
+	<div>
+		<Header />
+		<Hero
+			heading="Wedding Details"
+			subheading="Celebrations, Directions, Accomodations, and more!"
+		/>
+		<Footer />
+	</div>
 );
 
 export default WeddingDetailsPage;

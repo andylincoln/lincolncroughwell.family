@@ -1,8 +1,13 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import monogram from '../../images/svg/monogram.svg';
 
-const Hero = () => (
-  <div>Hero</div>
-);
-
-export default Hero
+export default class Hero extends React.Component {
+	render() {
+		return (
+			<div className="hero landing-hero">
+				<h1 className="hero--heading">{this.props.heading}</h1>
+				<h2 className="hero--subheading">{this.props.subheading}</h2>
+			</div>
+		);
+	}
+}
