@@ -1,0 +1,24 @@
+.hero {
+  &.green {
+    background: $color-forest-green;
+    color: $color-white;
+    h1 {
+      color: inherit;
+      font-style: normal;
+      font-size: 2.5625rem;
+
+      @media screen and (min-width: $break-desktopSmall) {
+        font-size: 5.75rem;
+      }
+    }
+    h2 {
+      color: inherit;
+      font-style: normal;
+      font-size: 1.3125rem;
+
+      @media screen and (min-width: $break-desktopSmall) {
+        font-size: 2.5625rem;
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ const WeddingDetailsPage = () => (
 		<Hero
 			heading="Wedding Details"
 			subheading="Celebrations, Directions, Accomodations, and more!"
+			color="green"
 		/>
 		<Footer />
 	</div>
