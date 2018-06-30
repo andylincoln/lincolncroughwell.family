@@ -1,67 +1,68 @@
 {
-  "name": "lincolncroughwell.family",
-  "description": "Lincoln Croughwell Wedding Site",
-  "version": "1.0.0",
-  "author": "Andy Lincoln <andy@andylincoln.io>",
-  "dependencies": {
-    "babel-core": "6.26.0",
-    "cheerio": "1.0.0-rc.2",
-    "gatsby": "^1.9.243",
-    "gatsby-cli": "1.1.56",
-    "gatsby-image": "^1.0.42",
-    "gatsby-link": "^1.6.40",
-    "gatsby-plugin-netlify": "^1.0.19",
-    "gatsby-plugin-postcss-sass": "^1.0.19",
-    "gatsby-plugin-react-helmet": "^2.0.8",
-    "gatsby-plugin-sass": "^1.0.25",
-    "gatsby-plugin-sharp": "1.6.41",
-    "gatsby-source-filesystem": "^1.5.27",
-    "gatsby-transformer-sharp": "^1.6.22",
-    "normalize.css": "^8.0.0",
-    "react-helmet": "^5.2.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "test": "jest"
-  },
-  "devDependencies": {
-    "babel-jest": "22.4.3",
-    "enzyme": "3.3.0",
-    "enzyme-adapter-react-15": "1.0.5",
-    "react-test-renderer": "15.6.1",
-    "jest": "22.4.3",
-    "jest-enzyme": "6.0.0",
-    "prettier": "^1.11.1"
-  },
-  "jest": {
-    "transform": {
-      ".(js|jsx)": "babel-jest"
-    },
-    "testEnvironment": "enzyme",
-    "testEnvironmentOptions": {
-      "enzymeAdapter": "react15"
-    },
-    "testRegex": "(\\.(test|spec))\\.(jsx|js)$",
-    "setupTestFrameworkScriptFile": "<rootDir>/jest-setup.js",
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/.cache/"
-    ],
-    "moduleFileExtensions": [
-      "jsx",
-      "js"
-    ],
-    "collectCoverage": true,
-    "coverageReporters": [
-      "lcov",
-      "text",
-      "html"
-    ]
-  }
+	"name": "lincolncroughwell.family",
+	"description": "Lincoln Croughwell Wedding Site",
+	"version": "1.0.0",
+	"author": "Andy Lincoln <andy@andylincoln.io>",
+	"dependencies": {
+		"babel-core": "6.26.0",
+		"cheerio": "1.0.0-rc.2",
+		"gatsby": "^1.9.243",
+		"gatsby-image": "^1.0.42",
+		"gatsby-link": "^1.6.40",
+		"gatsby-plugin-netlify": "^1.0.19",
+		"gatsby-plugin-postcss-sass": "^1.0.19",
+		"gatsby-plugin-react-helmet": "^2.0.8",
+		"gatsby-plugin-sass": "^1.0.25",
+		"gatsby-plugin-sharp": "1.6.41",
+		"gatsby-source-filesystem": "^1.5.27",
+		"gatsby-transformer-sharp": "^1.6.22",
+		"normalize.css": "^8.0.0",
+		"react-helmet": "^5.2.0"
+	},
+	"keywords": [
+		"gatsby"
+	],
+	"license": "MIT",
+	"scripts": {
+		"build": "gatsby build",
+		"develop": "gatsby develop",
+		"format": "prettier --write 'src/**/*.js'",
+		"start": "gatsby develop",
+		"test": "jest"
+	},
+	"devDependencies": {
+		"babel-jest": "22.4.3",
+		"enzyme": "3.3.0",
+		"enzyme-adapter-react-15": "1.0.5",
+		"gatsby-cli": "^1.1.56",
+		"jest": "22.4.3",
+		"jest-enzyme": "6.0.0",
+		"prettier": "^1.11.1",
+		"react-test-renderer": "15.6.1"
+	},
+	"jest": {
+		"transform": {
+			".(js|jsx)": "babel-jest"
+		},
+		"testEnvironment": "enzyme",
+		"testEnvironmentOptions": {
+			"enzymeAdapter": "react15"
+		},
+		"testRegex": "(\\.(test|spec))\\.(jsx|js)$",
+		"setupTestFrameworkScriptFile": "<rootDir>/jest-setup.js",
+		"testPathIgnorePatterns": [
+			"/node_modules/",
+			"/.cache/"
+		],
+		"moduleFileExtensions": [
+			"jsx",
+			"js"
+		],
+		"collectCoverage": true,
+		"coverageReporters": [
+			"lcov",
+			"text",
+			"html"
+		]
+	}
 }
