@@ -42,7 +42,10 @@ export default class Nav extends React.Component {
 						</Link>
 					</li>
 					<li>
-						<Link to="/rsvp" className={`rsvp ${this.currentPage('/rsvp')}`}>
+						<Link
+							to="/rsvp"
+							className={`page--rsvp ${this.currentPage('/rsvp')}`}
+						>
 							RSVP
 						</Link>
 					</li>

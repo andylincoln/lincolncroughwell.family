@@ -115,15 +115,13 @@ nav.main-navigation {
   }
 }
 
-.main-navigation--front-page {
-}
-
 .main-navigation.main-navigation--interior {
   background: $color-white;
   color: $color-navy-blue;
   a {
     @media screen and (min-width: $break-desktopSmall) {
       color: $color-navy-blue;
+
       &.page--home {
         img {
           height: auto;
@@ -134,6 +132,20 @@ nav.main-navigation {
       &.page--current {
         color: $color-copper;
         font-weight: bold;
+      }
+
+      &:hover,
+      &:active {
+        color: $color-navy-blue-2;
+      }
+
+      &.page--rsvp {
+        border: 1px solid $color-navy-blue;
+        border-radius: 8px;
+        background: $color-navy-blue;
+        color: $color-white;
+        font-weight: normal;
+        padding: 15px 30px;
       }
     }
   }
