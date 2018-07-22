@@ -1,24 +1,29 @@
 nav.wedding-details-nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
   background: $color-white;
   margin: 0 auto;
+  padding: 15px 0;
   ul {
     display: none;
     padding: 0;
     margin: 0 auto;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 
     @media screen and (min-width: $break-tabletSmall) {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
+      align-items: center;
       max-width: 1000px;
     }
     li {
       margin: 0 auto;
+      line-height: 1;
+      padding: 0;
       @media screen and (min-width: $break-tabletSmall) {
-        margin: 15px;
       }
     }
   }
@@ -26,6 +31,9 @@ nav.wedding-details-nav {
   a {
     display: block;
     font-size: 1.875rem;
+    line-height: 1.667;
+    margin: 0 15px;
+
     &:hover,
     &:focus {
       color: $color-navy-blue;
