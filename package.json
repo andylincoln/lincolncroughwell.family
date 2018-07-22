@@ -6,6 +6,7 @@
   "dependencies": {
     "babel-core": "6.26.0",
     "cheerio": "1.0.0-rc.2",
+    "choices.js": "^3.0.4",
     "eslint": "^5.2.0",
     "gatsby": "^1.9.243",
     "gatsby-image": "^1.0.42",

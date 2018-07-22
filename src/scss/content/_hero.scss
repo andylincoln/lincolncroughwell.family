@@ -1,4 +1,41 @@
 .hero {
+  position: relative;
+  background-color: $color-navy-blue;
+  color: $color-white;
+  padding: 100px 30px 50px 30px;
+  text-align: center;
+
+  &::before {
+    content: '';
+    background: left bottom/auto 75% url('../images/svg/fern.svg') no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  &::after {
+    display: none;
+    @media screen and (min-width: $break-desktopSmall) {
+      display: block;
+      content: '';
+      background: right top/auto 75% url('../images/svg/fern.svg') no-repeat;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+  }
+
   &.green {
     background: $color-forest-green;
     color: $color-white;
@@ -15,6 +52,11 @@
       color: inherit;
       font-style: normal;
       font-size: 1.3125rem;
+
+      &.hero--subheading {
+        font-weight: normal;
+        text-transform: none;
+      }
 
       @media screen and (min-width: $break-desktopSmall) {
         font-size: 2.5625rem;

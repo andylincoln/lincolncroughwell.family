@@ -1,10 +1,4 @@
 .landing-hero {
-  position: relative;
-  background-color: $color-navy-blue;
-  color: $color-white;
-  padding: 100px 30px 50px 30px;
-  text-align: center;
-
   &::before {
     content: '';
     background: left bottom/auto 75% url('../images/svg/fern.svg') no-repeat;
