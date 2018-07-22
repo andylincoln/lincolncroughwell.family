@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import Icon from '../Icon/';
-import monogram from '../../images/svg/monogram.svg';
+// import monogram from '../../images/svg/monogram.svg';
 
 export default class Nav extends React.Component {
 	componentDidMount() {
@@ -38,7 +38,7 @@ export default class Nav extends React.Component {
 				<ul className="menu">
 					<li>
 						<Link to="/" className="page--home">
-							<img src={monogram} alt="Home" />
+							<img src="" alt="Home" />
 						</Link>
 					</li>
 					<li>
