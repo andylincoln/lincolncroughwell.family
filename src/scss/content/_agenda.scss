@@ -1,10 +1,60 @@
 // _agenda.scss
 
 .agenda {
+  background: $color-off-white;
 }
 
+.event {
+  position: static;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 10px auto;
+  box-shadow: transparentize($color: black, $amount: 0.84) 6px 4px 6px;
+  &-image {
+    width: 50%;
+  }
+  &-details {
+    max-width: 50%;
+    h4 {
+      color: $color-black;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    h5 {
+      color: $color-black;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    h6 {
+      color: $color-black;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: bold;
+    }
+    a.action {
+      &::after {
+        content: '>';
+        margin-left: 0.25em;
+      }
+      color: $color-copper;
+      font-size: 1rem;
+      line-height: 1.27;
+
+      @media screen and (min-width: $break-tabletSmall) {
+        font-size: 1.5rem;
+        line-height: 1.2;
+      }
+    }
+  }
+}
 .date-wrapper {
   position: relative;
+  margin: 0 auto;
+}
+
+.date-wrapper time {
   background: $color-forest-green;
   border-radius: 50%;
   color: $color-white;
@@ -14,8 +64,8 @@
 time.date {
   color: $color-white;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 10%;
+  left: -10%;
   transform: translate(-50%, -50%);
 
   .month {

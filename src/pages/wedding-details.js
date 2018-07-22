@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import WeddingDetailsNav from '../components/WeddingDetailsNav'
 import Agenda from '../components/Agenda'
 import AgendaItem from '../components/AgendaItem'
-import Date from '../components/Date'
+import DateMarker from '../components/DateMarker'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
@@ -22,7 +22,10 @@ const drinks_at_old_court = {
   location: 'Old Court Pub',
   description:
     'If you’re arriving the Friday before we would love to say hello.',
-  cta_link: '#',
+  cta_link: {
+    type: 'Directions',
+    url: '#',
+  },
 }
 
 const ceremony = {
@@ -31,7 +34,10 @@ const ceremony = {
   location: 'Methuen Memorial Music Hall',
   description:
     'If you’re arriving the Friday before we would love to say hello.',
-  cta_link: '#',
+  cta_link: {
+    type: 'Directions',
+    url: '#',
+  },
 }
 
 const cocktail_hour = {
@@ -40,7 +46,10 @@ const cocktail_hour = {
   location: '',
   description:
     'If you’re arriving the Friday before we would love to say hello.',
-  cta_link: '#',
+  cta_link: {
+    type: 'Directions',
+    url: '#',
+  },
 }
 
 const reception = {
@@ -49,16 +58,18 @@ const reception = {
   location: '',
   description:
     'If you’re arriving the Friday before we would love to say hello.',
-  cta_link: '#',
 }
 
 const brunch = {
   name: 'Sunday Brunch',
   time: '',
-  location: '',
+  location: "The Lincoln's",
   description:
     'If you’re arriving the Friday before we would love to say hello.',
-  cta_link: '#',
+  cta_link: {
+    type: 'RSVP',
+    url: '#',
+  },
 }
 
 const WeddingDetailsPage = () => (
@@ -71,15 +82,17 @@ const WeddingDetailsPage = () => (
     />
     <WeddingDetailsNav />
     <Agenda>
-      <AgendaItem image={image} event={drinks_at_old_court} date={nov23} />
-      <Date date={nov24}>
+      <DateMarker date={nov23}>
+        <AgendaItem image={image} event={drinks_at_old_court} />
+      </DateMarker>
+      <DateMarker date={nov24}>
         <AgendaItem type="image" image={image} event={ceremony} />
         <AgendaItem type="image" image={image} event={cocktail_hour} />
         <AgendaItem type="icon" icon="cocktails" event={reception} />
-      </Date>
-      <Date date={nov25}>
-        <AgendaItem type="icon" icon="cocktails" event={brunch} />
-      </Date>
+      </DateMarker>
+      <DateMarker date={nov25}>
+        <AgendaItem type="icon" icon="brunch" event={brunch} />
+      </DateMarker>
     </Agenda>
     <Footer />
   </div>
