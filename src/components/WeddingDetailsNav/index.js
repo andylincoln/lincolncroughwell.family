@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import Choices from 'choices.js'
+
+if (process.browser || document) {
+  let Choices = require('Choices.js')
+}
 
 export default class WeddingDetailsNav extends Component {
   constructor(props) {
