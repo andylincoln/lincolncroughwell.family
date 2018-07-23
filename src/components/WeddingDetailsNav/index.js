@@ -4,10 +4,14 @@ import Choices from 'choices.js'
 export default class WeddingDetailsNav extends Component {
   constructor(props) {
     super(props)
+    this.selectRef = null
+    this.setSelectRef = (element) => {
+      this.selectRef = element
+    }
   }
+
   componentDidMount() {
-    const select = document.getElementById('wedding-details-nav-select')
-    new Choices(select, {
+    new Choices(this.selectRef, {
       disabled: false,
       addItems: false,
       removeItems: false,
@@ -53,6 +57,7 @@ export default class WeddingDetailsNav extends Component {
             name="wedding-details-nav"
             id="wedding-details-nav-select"
             onChange={this.handleSelectOnChange}
+            ref={this.setSelectRef}
           />
         </div>
         <ul>
