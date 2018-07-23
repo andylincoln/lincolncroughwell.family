@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-if (process.browser || document) {
+if (typeof document !== 'undefined') {
   let Choices = require('choices.js')
 }
 
@@ -50,7 +50,9 @@ export default class WeddingDetailsNav extends Component {
     }
   }
   handleSelectOnChange(e) {
-    window.location.hash = e.target.value
+    if (typeof window !== 'undefined') {
+      window.location.hash = e.target.value
+    }
   }
 
   render() {
