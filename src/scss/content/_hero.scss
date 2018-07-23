@@ -43,6 +43,8 @@
       color: inherit;
       font-style: normal;
       font-size: 2.5625rem;
+      word-break: break-all;
+      word-wrap: break-word;
 
       @media screen and (min-width: $break-desktopSmall) {
         font-size: 5.75rem;

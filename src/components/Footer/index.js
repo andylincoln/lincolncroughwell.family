@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'gatsby-link';
+import React from 'react'
+import Icon from '../Icon'
 
 // TODO Make the social media link data come in from GraphQL if needed elsewhere
 const Footer = () => (
@@ -20,12 +20,7 @@ const Footer = () => (
           </label>
           <label>
             <span>Email</span>
-            <input
-              type="email"
-              className="email"
-              name="email"
-              required
-            />
+            <input type="email" className="email" name="email" required />
           </label>
           <label>
             <span>Message</span>
@@ -44,13 +39,13 @@ const Footer = () => (
           <h6>Connect with Andy</h6>
           <ul>
             <li>
-              <span className="icon" />
               <a
                 href="https://www.instagram.com/andy_lincoln"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                @andy_lincoln
+                <Icon name="instagram" />
+                <span>@andy_lincoln</span>
               </a>
             </li>
             <li>
@@ -59,7 +54,8 @@ const Footer = () => (
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                facebook.com/andylincoln11
+                <Icon name="facebook" />
+                <span> facebook.com/andylincoln11</span>
               </a>
             </li>
           </ul>
@@ -68,23 +64,23 @@ const Footer = () => (
           <h6>Connect with Sarah</h6>
           <ul>
             <li>
-              <span className="icon" />
               <a
                 href="https://www.instagram.com/sarahcroughwell"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                @sarahcroughwell
+                <Icon name="instagram" />
+                <span>@sarahcroughwell</span>
               </a>
             </li>
             <li>
-              <span className="icon" />
               <a
                 href="https://www.facebook.com/sarah.croughwell"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                facebook.com/sarah.croughwell
+                <Icon name="facebook" />
+                <span>facebook.com/sarah.croughwell</span>
               </a>
             </li>
           </ul>
@@ -95,6 +91,6 @@ const Footer = () => (
       <span className="colophon">Created by Sarah and Andy with love</span>
     </div>
   </footer>
-);
+)
 
-export default Footer;
+export default Footer
