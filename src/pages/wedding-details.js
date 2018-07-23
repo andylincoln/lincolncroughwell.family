@@ -7,13 +7,25 @@ import DateMarker from '../components/DateMarker'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
+import auditorium from '../static/auditorium@2x.jpg'
+import beer from '../static/beer@2x.jpg'
+import music_hall2 from '../static/music_hall2@2x.jpg'
+
 const nov23 = new Date('2018-11-23T00:00:00')
 const nov24 = new Date('2018-11-24T00:00:00')
 const nov25 = new Date('2018-11-25T00:00:00')
 
-const image = {
-  src: '',
+const img_auditorium = {
+  src: auditorium,
   alt: '',
+}
+const img_beer = {
+  src: beer,
+  alt: '',
+}
+const img_musichall2 = {
+  src: music_hall2,
+  alt: 'The organ and ceiling of the Methuen Memorial Music Hall',
 }
 
 const drinks_at_old_court = {
@@ -83,12 +95,12 @@ const WeddingDetailsPage = () => (
     <WeddingDetailsNav />
     <Agenda>
       <DateMarker date={nov23}>
-        <AgendaItem image={image} event={drinks_at_old_court} />
+        <AgendaItem type="image" image={img_beer} event={drinks_at_old_court} />
       </DateMarker>
       <DateMarker date={nov24}>
-        <AgendaItem type="image" image={image} event={ceremony} />
-        <AgendaItem type="image" image={image} event={cocktail_hour} />
-        <AgendaItem type="icon" icon="cocktails" event={reception} />
+        <AgendaItem type="image" image={img_musichall2} event={ceremony} />
+        <AgendaItem type="icon" icon="clinking" event={cocktail_hour} />
+        <AgendaItem type="icon" image={img_auditorium} event={reception} />
       </DateMarker>
       <DateMarker date={nov25}>
         <AgendaItem type="icon" icon="brunch" event={brunch} />

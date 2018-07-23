@@ -44,14 +44,12 @@ export default class AgendaItem extends Component {
     const event = this.props.event
     return (
       <div className="agenda-item">
-        <div className="event">
-          {this.renderImage()}
-          <div className="event-details">
-            <h4>{event.name}</h4>
-            <h5>{event.time}</h5>
-            <h6>{event.description}</h6>
-            {this.renderCallToActionLink()}
-          </div>
+        {this.renderImage()}
+        <div className="event-details">
+          <h4>{event.name}</h4>
+          <h5>{event.time}</h5>
+          <h6>{event.description}</h6>
+          {this.renderCallToActionLink()}
         </div>
       </div>
     )

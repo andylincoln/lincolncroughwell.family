@@ -19,6 +19,7 @@ nav.wedding-details-nav {
       align-items: center;
       max-width: 1000px;
     }
+
     li {
       margin: 0 auto;
       line-height: 1;
@@ -32,7 +33,7 @@ nav.wedding-details-nav {
     display: block;
     font-size: 1.875rem;
     line-height: 1.667;
-    margin: 0 15px;
+    margin: auto 15px;
 
     &:hover,
     &:focus {
@@ -44,6 +45,7 @@ nav.wedding-details-nav {
     }
   }
   .select-nav {
+    margin: 0 auto;
     padding: 15px;
     text-align: center;
     @media screen and (min-width: $break-tabletSmall) {

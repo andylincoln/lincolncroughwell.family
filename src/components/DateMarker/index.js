@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import moment from 'moment'
 
 export default class DateMarker extends Component {
   constructor(props) {
@@ -7,8 +8,8 @@ export default class DateMarker extends Component {
   }
   render() {
     const { date } = this.props
-    const day = date.getDay()
-    const month = date.getMonth()
+    const day = moment(date).format('DD')
+    const month = moment(date).format('MMM')
 
     return (
       <div className="date-wrapper">

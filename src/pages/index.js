@@ -1,15 +1,15 @@
-import React from 'react';
-import Link, { withPrefix } from 'gatsby-link';
+import React from 'react'
+import Link, { withPrefix } from 'gatsby-link'
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import FrontPageHero from '../components/FrontPageHero';
-import ThreeCol from '../components/ThreeCol';
-import Polaroid from '../components/Polaroid';
-import image from '../static/andy_sarah_engagement_portrait.jpg';
-import image2x from '../static/andy_sarah_engagement_portrait@2x.jpg';
-import auditorium from '../static/Lowell_Memorial_Auditorium_main_entrance;_Lowell@2x.jpg';
-import icc_hotel_image from '../static/umass-lowell-inn-and-conference-center-18.jpg';
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import FrontPageHero from '../components/FrontPageHero'
+import ThreeCol from '../components/ThreeCol'
+import Polaroid from '../components/Polaroid'
+import image from '../static/andy_sarah_engagement_portrait.jpg'
+import image2x from '../static/andy_sarah_engagement_portrait@2x.jpg'
+import auditorium from '../static/auditorium@2x.jpg'
+import icc_hotel_image from '../static/umass-lowell-inn-and-conference-center-18.jpg'
 
 const polaroid_announcement = {
   image: {
@@ -26,7 +26,7 @@ const polaroid_announcement = {
     label: 'Our Story',
     href: '/our-story',
   },
-};
+}
 const polaroid_location = {
   image: {
     src: auditorium,
@@ -43,7 +43,7 @@ const polaroid_location = {
     href: '/',
   },
   texture: 'monogram',
-};
+}
 const polaroid_accomodations = {
   theme: 'dark',
   image: {
@@ -65,7 +65,7 @@ const polaroid_accomodations = {
     href: '/',
   },
   texture: 'fern',
-};
+}
 
 const IndexPage = () => (
   <div className="front-page">
@@ -80,6 +80,6 @@ const IndexPage = () => (
     <Polaroid {...polaroid_accomodations} />
     <Footer />
   </div>
-);
+)
 
-export default IndexPage;
+export default IndexPage

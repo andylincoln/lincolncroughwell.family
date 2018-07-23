@@ -1,34 +1,70 @@
 // _agenda.scss
 
 .agenda {
+  @include clearfix();
   background: $color-off-white;
+  padding: 0 20px;
 }
 
-.event {
-  position: static;
+.agenda-item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px auto;
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto 10px auto;
+  max-width: 100%;
   box-shadow: transparentize($color: black, $amount: 0.84) 6px 4px 6px;
-  &-image {
-    width: 50%;
+
+  @media screen and (min-width: $break-mobileLarge) {
+    background: $color-white;
+    padding-top: 0;
   }
-  &-details {
-    max-width: 50%;
+
+  @media screen and (min-width: $break-tabletSmall) {
+    flex-flow: row wrap;
+  }
+
+  @media screen and (min-width: $break-desktopSmall) {
+    margin: 40px auto;
+  }
+
+  .event-image {
+    @media screen and (min-width: $break-tabletSmall) {
+      flex: 0.5 1 50%;
+      width: calc(50%);
+    }
+  }
+  .event-icon {
+    .icon {
+      fill: black;
+      max-width: 100px;
+    }
+  }
+  .event-details {
+    background: $color-white;
+    padding: 20px;
+    height: calc(100%);
+    width: 100%;
+
+    @media screen and (min-width: $break-tabletSmall) {
+      flex: 0.5 1 50%;
+      width: calc(50%);
+      padding: 40px;
+    }
     h4 {
       color: $color-black;
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: auto;
     }
     h5 {
       color: $color-black;
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: auto;
     }
     h6 {
       color: $color-black;
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: auto;
       font-size: 1rem;
       font-style: italic;
       font-weight: bold;
@@ -42,38 +78,108 @@
       font-size: 1rem;
       line-height: 1.27;
 
-      @media screen and (min-width: $break-tabletSmall) {
+      @media screen and (min-width: $break-mobileLarge) {
         font-size: 1.5rem;
         line-height: 1.2;
       }
     }
   }
 }
+
 .date-wrapper {
   position: relative;
-  margin: 0 auto;
-}
+  margin: 120px auto;
 
-.date-wrapper time {
-  background: $color-forest-green;
-  border-radius: 50%;
-  color: $color-white;
-  height: 100px;
-  width: 100px;
-}
-time.date {
-  color: $color-white;
-  position: absolute;
-  top: 10%;
-  left: -10%;
-  transform: translate(-50%, -50%);
-
-  .month {
-    display: block;
-    font-size: 0.5625rem;
+  transition: width 0.2s ease-in;
+  z-index: 0;
+  @media screen and (min-width: $break-desktopSmall) {
+    margin: 160px auto;
   }
-  .day {
-    display: block;
-    font-size: 1rem;
+  @media screen and (min-width: $break-desktopMedium) {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  @media screen and (min-width: $break-desktopLarge) {
+    max-width: 1200px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    z-index: 0;
+    height: calc(100% + 120px);
+    content: '';
+    border-left: 1px solid $color-copper;
+    z-index: 1;
+
+    @media screen and (min-width: $break-desktopSmall) {
+      top: -80px;
+    }
+
+    @media screen and (min-width: $break-desktopMedium) {
+      left: -80px;
+      top: 0;
+      height: calc(100%);
+    }
+  }
+  &:last-of-type::before {
+    display: none;
+  }
+
+  time.date {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    background: $color-forest-green;
+    border-radius: 50%;
+    color: $color-white;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    padding: 1em;
+    transition: height 0.1s ease-in, width 0.1s ease-in, font-size 0.1s ease-in;
+
+    @media screen and (min-width: $break-mobileLarge) {
+      height: 100px;
+      width: 100px;
+      padding: 1em;
+    }
+
+    @media screen and (min-width: $break-desktopSmall) {
+      top: -80px;
+    }
+
+    @media screen and (min-width: $break-desktopMedium) {
+      left: -80px;
+      top: 0;
+    }
+
+    .month {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.11;
+      text-transform: uppercase;
+
+      @media screen and (min-width: $break-mobileLarge) {
+        font-size: 1.5rem;
+        line-height: 1.08;
+      }
+    }
+
+    .day {
+      display: block;
+      font-family: $font-abril-fatface;
+      font-size: 1.75rem;
+      font-style: italic;
+      line-height: 1.1;
+
+      @media screen and (min-width: $break-mobileLarge) {
+        font-size: 2.4375rem;
+      }
+    }
   }
 }
