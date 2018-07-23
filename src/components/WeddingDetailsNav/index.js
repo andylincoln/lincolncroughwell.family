@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 if (process.browser || document) {
-  let Choices = require('Choices.js')
+  let Choices = require('choices.js')
 }
 
 export default class WeddingDetailsNav extends Component {
