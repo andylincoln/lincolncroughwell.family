@@ -11,36 +11,40 @@ export default class WeddingDetailsNav extends Component {
   }
 
   componentDidMount() {
-    new Choices(this.selectRef, {
-      disabled: false,
-      addItems: false,
-      removeItems: false,
-      type: 'select-single',
-      searchEnabled: false,
-      choices: [
-        {
-          value: 'agenda',
-          label: 'Agenda',
-          // selected: true,
-          disabled: false,
-        },
-        {
-          value: 'accomodations',
-          label: 'Accomodations',
-          disabled: false,
-        },
-        {
-          value: 'directions',
-          label: 'Directions',
-          disabled: false,
-        },
-        {
-          value: 'wedding-party',
-          label: 'Wedding Party',
-          disabled: false,
-        },
-      ],
-    })
+    try {
+      new Choices(this.selectRef, {
+        disabled: false,
+        addItems: false,
+        removeItems: false,
+        type: 'select-single',
+        searchEnabled: false,
+        choices: [
+          {
+            value: 'agenda',
+            label: 'Agenda',
+            // selected: true,
+            disabled: false,
+          },
+          {
+            value: 'accomodations',
+            label: 'Accomodations',
+            disabled: false,
+          },
+          {
+            value: 'directions',
+            label: 'Directions',
+            disabled: false,
+          },
+          {
+            value: 'wedding-party',
+            label: 'Wedding Party',
+            disabled: false,
+          },
+        ],
+      })
+    } catch (e) {
+      console.log(e)
+    }
   }
   handleSelectOnChange(e) {
     window.location.hash = e.target.value
