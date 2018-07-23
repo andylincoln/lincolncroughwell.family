@@ -21,6 +21,16 @@ export default class AgendaItem extends Component {
     )
   }
 
+  renderDateTime = () => {
+    const { startTime, endTime } = this.props.event
+    return startTime.twix(endTime).format({
+      monthFormat: 'MMMM',
+      dayFormat: 'Do',
+      weekdayFormat: 'dddd',
+      showDayOfWeek: true,
+    })
+  }
+
   renderCallToActionLink = () => {
     const { event } = this.props
     if (event.cta_link) {
@@ -46,9 +56,10 @@ export default class AgendaItem extends Component {
       <div className="agenda-item">
         {this.renderImage()}
         <div className="event-details">
-          <h4>{event.name}</h4>
-          <h5>{event.time}</h5>
-          <h6>{event.description}</h6>
+          <h4 className="event-name">{event.name}</h4>
+          <h5 className="event-time">{this.renderDateTime()}</h5>
+          <h6 className="event-location">{event.location}</h6>
+          <p className="event-description">{event.description}</p>
           {this.renderCallToActionLink()}
         </div>
       </div>

@@ -25,6 +25,7 @@
 
   @media screen and (min-width: $break-tabletSmall) {
     flex-flow: row wrap;
+    align-items: center;
   }
 
   @media screen and (min-width: $break-desktopSmall) {
@@ -38,9 +39,18 @@
     }
   }
   .event-icon {
+    padding: 20px;
+    background: $color-white;
+    width: 100%;
+    @media screen and (min-width: $break-tabletSmall) {
+      flex: 0.5 1 50%;
+      width: calc(50%);
+    }
     .icon {
+      display: block;
       fill: black;
-      max-width: 100px;
+      max-width: 120px;
+      margin: 0 auto;
     }
   }
   .event-details {
@@ -54,33 +64,54 @@
       width: calc(50%);
       padding: 40px;
     }
-    h4 {
+    .event-name {
+      color: $color-black;
+      font-weight: normal;
+      line-height: 1;
+      margin: auto;
+      @media screen and (min-width: $break-desktopSmall) {
+        font-size: 2.1875rem;
+      }
+    }
+    .event-time {
       color: $color-black;
       margin: auto;
+      font-size: 1rem;
+      line-height: 1.2;
+      @media screen and (min-width: $break-desktopSmall) {
+        font-size: 1.5rem;
+      }
     }
-    h5 {
-      color: $color-black;
-      margin: auto;
-    }
-    h6 {
+    .event-location {
       color: $color-black;
       margin: auto;
       font-size: 1rem;
       font-style: italic;
       font-weight: bold;
+      line-height: 1.2;
+      @media screen and (min-width: $break-desktopSmall) {
+        font-size: 1.5rem;
+      }
     }
-    a.action {
+    .event-description {
+      font-size: 1rem;
+      line-height: 1.1;
+      margin: 0;
+      @media screen and (min-width: $break-desktopSmall) {
+        font-size: 1.5rem;
+      }
+    }
+    .action {
       &::after {
         content: '>';
         margin-left: 0.25em;
       }
       color: $color-copper;
       font-size: 1rem;
-      line-height: 1.27;
+      line-height: 1.2;
 
       @media screen and (min-width: $break-mobileLarge) {
         font-size: 1.5rem;
-        line-height: 1.2;
       }
     }
   }
