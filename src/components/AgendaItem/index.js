@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import Icon from '../Icon'
 
 export default class AgendaItem extends Component {
-  renderImage = () => {
-    const image = this.props.image
+  renderGraphic = (graphic) => {
+    const { type, image, icon } = graphic
     const src = image ? image.src : ''
     const alt = image ? image.alt : ''
-    if (this.props.type === 'image') {
+    if (type === 'image') {
       return (
         <div className="event-image">
           <img src={src} alt={alt} />
@@ -16,7 +16,7 @@ export default class AgendaItem extends Component {
 
     return (
       <div className="event-icon">
-        <Icon name={this.props.icon} />
+        <Icon name={icon} />
       </div>
     )
   }
@@ -51,10 +51,11 @@ export default class AgendaItem extends Component {
     }
   }
   render() {
-    const event = this.props.event
+    const { event } = this.props
+    const { graphic } = event
     return (
-      <div className="agenda-item">
-        {this.renderImage()}
+      <div className={`agenda-item ${graphic.type}`}>
+        {this.renderGraphic(graphic)}
         <div className="event-details">
           <h4 className="event-name">{event.name}</h4>
           <h5 className="event-time">{this.renderDateTime()}</h5>

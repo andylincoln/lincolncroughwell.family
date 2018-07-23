@@ -14,20 +14,14 @@ import auditorium from '../static/auditorium@2x.jpg'
 import beer from '../static/beer@2x.jpg'
 import music_hall2 from '../static/music_hall2@2x.jpg'
 
-const img_auditorium = {
-  src: auditorium,
-  alt: '',
-}
-const img_beer = {
-  src: beer,
-  alt: '',
-}
-const img_musichall2 = {
-  src: music_hall2,
-  alt: 'The organ and ceiling of the Methuen Memorial Music Hall',
-}
-
 const drinks_at_old_court = {
+  graphic: {
+    type: 'image',
+    image: {
+      src: beer,
+      alt: '',
+    },
+  },
   name: 'Casual Drinks',
   startTime: moment('2018-11-23 9:00 PM'),
   endTime: moment('2018-11-23 11:00 PM'),
@@ -41,6 +35,13 @@ const drinks_at_old_court = {
 }
 
 const ceremony = {
+  graphic: {
+    type: 'image',
+    image: {
+      src: music_hall2,
+      alt: 'The organ and ceiling of the Methuen Memorial Music Hall',
+    },
+  },
   name: 'Ceremony',
   startTime: moment('2018-11-24 2:00 PM'),
   endTime: moment('2018-11-24 4:00 PM'),
@@ -55,6 +56,10 @@ const ceremony = {
 
 const cocktail_hour = {
   name: 'Cocktail Hour',
+  graphic: {
+    type: 'icon',
+    icon: 'clinking',
+  },
   startTime: moment('2018-11-24 5:00 PM'),
   endTime: moment('2018-11-24 6:00 PM'),
   location: 'Lowell Memorial Auditorium',
@@ -64,6 +69,13 @@ const cocktail_hour = {
 
 const reception = {
   name: 'Reception',
+  graphic: {
+    type: 'image',
+    image: {
+      src: auditorium,
+      alt: '',
+    },
+  },
   startTime: moment('2018-11-24 6:00 PM'),
   endTime: moment('2018-11-24 11:00 PM'),
   location: 'Lowell Memorial Auditorium',
@@ -72,11 +84,14 @@ const reception = {
 
 const brunch = {
   name: 'Sunday Brunch',
+  graphic: {
+    type: 'icon',
+    icon: 'brunch',
+  },
   startTime: moment('2018-11-25 10:00 AM'),
   endTime: moment('2018-11-25 2:00 PM'),
   location: "The Lincoln's",
-  description:
-    'If you’re arriving the Friday before we would love to say hello.',
+  description: '',
   cta_link: {
     type: 'RSVP',
     url: '#',
@@ -94,15 +109,15 @@ const WeddingDetailsPage = () => (
     <WeddingDetailsNav />
     <Agenda>
       <DateMarker date={drinks_at_old_court.startTime}>
-        <AgendaItem type="image" image={img_beer} event={drinks_at_old_court} />
+        <AgendaItem event={drinks_at_old_court} />
       </DateMarker>
       <DateMarker date={ceremony.startTime}>
-        <AgendaItem type="image" image={img_musichall2} event={ceremony} />
-        <AgendaItem type="icon" icon="clinking" event={cocktail_hour} />
-        <AgendaItem type="image" image={img_auditorium} event={reception} />
+        <AgendaItem event={ceremony} />
+        <AgendaItem event={cocktail_hour} />
+        <AgendaItem event={reception} />
       </DateMarker>
       <DateMarker date={brunch.startTime}>
-        <AgendaItem type="icon" icon="brunch" event={brunch} />
+        <AgendaItem event={brunch} />
       </DateMarker>
     </Agenda>
     <Footer />

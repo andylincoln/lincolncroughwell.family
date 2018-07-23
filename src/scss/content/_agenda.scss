@@ -32,6 +32,19 @@
     margin: 40px auto;
   }
 
+  &.image .event-details {
+    @media screen and (min-width: $break-tabletSmall) {
+      flex: 0.5 1 50%;
+      width: calc(50%);
+    }
+  }
+  &.icon .event-details {
+    @media screen and (min-width: $break-tabletSmall) {
+      flex: 0.7 1 70%;
+      width: calc(70%);
+    }
+  }
+
   .event-image {
     @media screen and (min-width: $break-tabletSmall) {
       flex: 0.5 1 50%;
@@ -43,8 +56,8 @@
     background: $color-white;
     width: 100%;
     @media screen and (min-width: $break-tabletSmall) {
-      flex: 0.5 1 50%;
-      width: calc(50%);
+      flex: 0.3 1 30%;
+      width: calc(30%);
     }
     .icon {
       display: block;
@@ -60,8 +73,6 @@
     width: 100%;
 
     @media screen and (min-width: $break-tabletSmall) {
-      flex: 0.5 1 50%;
-      width: calc(50%);
       padding: 40px;
     }
     .event-name {
