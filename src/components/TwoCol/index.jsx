@@ -18,7 +18,10 @@ export default class TwoCol extends Component {
     const classNames = this.props.className
     return (
       <section {...this.props} className={`two-col ${classNames}`}>
-        {React.Children.map(children, this.renderChild)}
+        <div className="wrap">
+          {' '}
+          {React.Children.map(children, this.renderChild)}
+        </div>
       </section>
     )
   }

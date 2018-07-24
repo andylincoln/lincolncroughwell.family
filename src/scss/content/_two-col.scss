@@ -1,25 +1,27 @@
 .two-col {
   background: $color-off-white;
-  // Flex Fallback
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
+  .wrap {
+    // Flex Fallback
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
 
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 100%);
-    grid-gap: 40px;
-    padding: 0 20px;
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 100%);
 
-    @media screen and (min-width: $break-tabletSmall) {
-      grid-gap: 80px;
-      grid-template-columns: repeat(2, 1fr);
-    }
+      padding: 0 20px;
 
-    @media screen and (min-width: $break-desktopSmall) {
-      grid-gap: 120px;
-      padding: 0 300px;
+      @media screen and (min-width: $break-tabletSmall) {
+        grid-gap: 80px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (min-width: $break-desktopSmall) {
+        grid-gap: 120px;
+        padding: 0 30px;
+      }
     }
   }
 
