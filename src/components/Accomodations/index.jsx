@@ -1,39 +1,9 @@
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
 const GOOGLE_MAPS_API_KEY = 'AIzaSyCB6CQ2mpEFZ7W8TsKKUG9DKqvUzb9goPM'
 
 export default class Accomodations extends Component {
   constructor(props) {
     super(props)
-    this.ceremonyMapRef = null
-    this.receptionMapRef = null
-  }
-
-  initMaps() {
-    try {
-      const ceremonyMap = new google.maps.Map(this.ceremonyMapRef, {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
-      })
-      const receptionMap = new google.maps.Map(this.receptionMapRef, {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
-      })
-    } catch (e) {
-      console.log(e)
-    }
-  }
-
-  setCeremonyMapRef = (element) => {
-    this.ceremonyMapRef = element
-  }
-
-  setReceptionMapRef = (element) => {
-    this.receptionMapRef = element
-  }
-
-  componentDidMount = () => {
-    this.initMaps()
   }
 
   render() {
@@ -42,38 +12,52 @@ export default class Accomodations extends Component {
       subheading: 'From 495:',
       description:
         'The wedding ceremony will begin at 4:00pm in the little theater of the historic Lowell Memorial Auditorium. A cocktail hour will follow so you can start partying while we get our photos taken.',
-      refFunc: this.setCeremonyMapRef,
+      place_id: '',
     }
     const reception = {
       heading: 'Directions to the Reception:',
       subheading: 'From 495:',
       description:
         'The wedding ceremony will begin at 4:00pm in the little theater of the historic Lowell Memorial Auditorium. A cocktail hour will follow so you can start partying while we get our photos taken.',
-      refFunc: this.setReceptionMapRef,
+      place_id: '',
     }
 
     return (
       <section className="accomodations">
-        <Helmet>
-          <script
-            src={`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&callback=initMap`}
-            async
-          />
-        </Helmet>
-        <DirectionsForm> </DirectionsForm>
-        <DirectionsBlock {...ceremony}> </DirectionsBlock>
-        <DirectionsBlock {...reception}> </DirectionsBlock>
-        {this.props.children}
+        <div className="wrap">
+          <DirectionsForm> </DirectionsForm>
+          <DirectionsBlock {...ceremony}> </DirectionsBlock>
+          <DirectionsBlock {...reception}> </DirectionsBlock>
+          {this.props.children}
+        </div>
       </section>
     )
   }
 }
 
 const DirectionsForm = () => {
+  const getDirectionsForForm = (e, something, somethingElse) => {
+    e.preventDefault()
+    const googleMapsURL = `https://www.google.com/maps?saddr=My+Location&daddr=`
+    // try {
+    //   window.location.href=
+    // } catch (e) {
+    //   console.log(e)
+    // }
+  }
   return (
-    <form className="get-directions">
-      <label>Where are you coming from?</label>
-      <input type="text" name="address" />
+    <form
+      className="get-directions"
+      autoComplete="on"
+      onSubmit={getDirectionsForForm}
+    >
+      <label htmlFor="street-address">Where are you coming from?</label>
+      <input
+        type="text"
+        name="street-address"
+        id="street-address"
+        autoComplete="street-address"
+      />
       <button className="submit" type="submit">
         Get Directions
       </button>
@@ -81,7 +65,7 @@ const DirectionsForm = () => {
   )
 }
 
-const DirectionsBlock = ({ heading, subheading, description, refFunc }) => {
+const DirectionsBlock = ({ heading, subheading, description }) => {
   return (
     <div className="directions-block">
       <div className="steps">
@@ -89,7 +73,17 @@ const DirectionsBlock = ({ heading, subheading, description, refFunc }) => {
         <span className="h2">{subheading}</span>
         <p>{description}</p>
       </div>
-      <div className="map" ref={refFunc} />
+      <div className="map-wrapper">
+        <div className="responsive-iframe-wrapper">
+          <iframe
+            width="600"
+            height="450"
+            className="map-iframe"
+            src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNw0xCTyk44kROqVA-dy7sC4&key=${GOOGLE_MAPS_API_KEY}`}
+            allowFullScreen
+          />
+        </div>
+      </div>
     </div>
   )
 }

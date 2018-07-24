@@ -2,12 +2,42 @@
   background: $color-off-white;
   @include clearfix();
 
-  .get-directions {
+  .h1 {
+    display: block;
+    color: $color-navy-blue;
+    font-size: 1.875rem;
+    line-height: 1.1;
+    margin: 0.25em auto 0.25em auto;
+    text-align: center;
+    @media screen and (min-width: $break-desktopSmall) {
+    }
+  }
+
+  .h2 {
+    display: block;
+    color: $color-black;
+    font-size: 1.75rem;
+    line-height: 1.08;
+    margin: 0.25em auto 0.25em auto;
+    text-align: center;
+    text-transform: none;
+  }
+
+  p {
+    color: $color-black;
+    font-size: 1.5rem;
+    line-height: 1.08;
+    margin: 0 auto 0.5em auto;
+    max-width: 425px;
+    text-align: center;
+  }
+
+  form.get-directions {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    margin: 0 auto 1.5rem auto;
     width: 100%;
     max-width: 600px;
   }
@@ -23,24 +53,82 @@
   }
 
   input[type='text'] {
-    flex: 0.5 1 50%;
     color: $color-navy-blue;
     font-size: 1.5rem;
+    flex: 0.5 1 100%;
     line-height: 2.333;
-    margin: 10px 0;
+    margin: 10px auto;
     max-width: 326px;
+    @media screen and (min-width: $break-tabletSmall) {
+      flex: 0.5 1 50%;
+      margin: 10px 0;
+    }
   }
+
   button.submit {
-    flex: 0.5 1 50%;
+    flex: 0.5 1 100%;
     background: $color-navy-blue;
     color: $color-white;
     font-size: 2.1875rem;
     line-height: 1.08;
     max-width: 240px;
     text-transform: none;
+    @media screen and (min-width: $break-tabletSmall) {
+      flex: 0.5 1 50%;
+    }
   }
-}
 
-.map {
-  height: 100%;
+  .directions-block {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin: 0 auto;
+
+    @media screen and (min-width: $break-tabletSmall) {
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    @media screen and (min-width: $break-desktopSmall) {
+      max-width: 1200px;
+    }
+  }
+
+  .steps {
+    width: 100%;
+    padding: 0 10px;
+
+    @media screen and (min-width: $break-tabletSmall) {
+      flex: 0.5 1 50%;
+      align-self: center;
+      padding: 0 20px;
+      width: calc(50% - 10px);
+    }
+  }
+
+  .map-iframe {
+    border: 0;
+  }
+
+  .map-wrapper {
+    display: none;
+    width: 100%;
+    padding: 0 10px;
+
+    @media screen and (min-width: $break-tabletSmall) {
+      display: block;
+      max-width: 425px;
+      margin: 0 auto;
+      padding: 0 20px;
+      flex: 0.5 1 50%;
+      width: calc(50% - 10px);
+    }
+
+    @media screen and (min-width: $break-desktopSmall) {
+      max-width: 600px;
+    }
+  }
 }
