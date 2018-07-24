@@ -38,6 +38,7 @@ html {
 // Accessibly remove bullets from the lists
 ul,
 ol {
+  padding: 0;
   li {
     list-style-type: none; /* remove bullets */
     &::before {
