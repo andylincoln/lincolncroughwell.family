@@ -1,19 +1,72 @@
 .two-col {
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-columns: max-content;
-  }
+  background: $color-off-white;
+  // Flex Fallback
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
 
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100%);
+    grid-gap: 40px;
+    padding: 0 20px;
+
+    @media screen and (min-width: $break-tabletSmall) {
+      grid-gap: 80px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $break-desktopSmall) {
+      grid-gap: 120px;
+      padding: 0 300px;
+    }
+  }
+
+  .h1 {
+    display: block;
+    color: $color-navy-blue;
+    font-style: normal;
+  }
+  p {
+    margin: 0 auto;
+    max-width: 500px;
+    @media screen and (min-width: $break-tabletSmall) {
+      max-width: none;
+    }
+  }
+  p,
+  a,
+  ul,
+  li {
+    color: $color-black;
+    font-size: 1.5rem;
+    line-height: 1.08;
+    font-weight: 500;
+  }
+
+  ul {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
   .col {
     flex: 0.5 1 50%;
     width: 50%;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 35px 0;
+    text-align: center;
+
     @supports (display: grid) {
-      width: 100%;
+      grid-column: span 1;
+      max-width: none;
+      width: auto;
+    }
+
+    @media screen and (min-width: $break-tabletSmall) {
+      padding: 70px 0;
+      max-width: 420px;
     }
   }
 }

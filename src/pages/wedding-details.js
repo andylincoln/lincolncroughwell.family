@@ -19,9 +19,7 @@ const WeddingDetailsPage = () => (
     />
     <WeddingDetailsNav />
     <Agenda />
-    <hr />
-    <Accomodations />
-    <hr />
+    <Divider />
     <TwoCol className="directions" id="directions">
       <div>
         <span className="h1">Hotel</span>
@@ -44,10 +42,43 @@ const WeddingDetailsPage = () => (
         </p>
       </div>
     </TwoCol>
-    <hr />
-    <section className="wedding-party" id="wedding-party" />
+    <Divider />
+    <Accomodations />
+    <Divider />
+    <TwoCol className="wedding-party" id="wedding-party">
+      <div>
+        <span className="h1">Bridesmaids</span>
+        <ul>
+          <li>Nicole Lynch, Maid of Honor</li>
+          <li>Kelsey Barowich</li>
+          <li>Dena DiPardo</li>
+          <li>Nicole Dubé</li>
+          <li>Liz Lincoln Gavriel</li>
+          <li>Molly Sheehan</li>
+        </ul>
+      </div>
+      <div>
+        <span className="h1">Groomsmen</span>
+        <ul>
+          <li>Max Markmanrud, Best Person</li>
+          <li>Anthony Ferranti</li>
+          <li>Thomas Emery</li>
+          <li>Miguel Landestoy</li>
+          <li>William McAndrews</li>
+          <li>Alexander Whiting</li>
+        </ul>
+      </div>
+    </TwoCol>
     <Footer />
   </div>
 )
+
+const Divider = () => {
+  return (
+    <div className="divider">
+      <hr />
+    </div>
+  )
+}
 
 export default WeddingDetailsPage

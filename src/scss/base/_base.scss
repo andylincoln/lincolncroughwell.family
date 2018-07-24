@@ -53,3 +53,18 @@ img {
   object-fit: contain;
   object-position: center;
 }
+
+div.divider {
+  background: $color-off-white;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #707070;
+  display: block;
+  width: 100%;
+  max-width: calc(80%);
+}
