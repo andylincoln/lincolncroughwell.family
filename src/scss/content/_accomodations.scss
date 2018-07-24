@@ -1,2 +1,46 @@
 .accomodations {
+  background: $color-off-white;
+  @include clearfix();
+
+  .get-directions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  label {
+    display: block;
+    flex: 1 1 100%;
+    color: $color-navy-blue;
+    text-align: center;
+    font-size: 2.1875rem;
+    line-height: 1.08;
+    margin: 0 auto;
+  }
+
+  input[type='text'] {
+    flex: 0.5 1 50%;
+    color: $color-navy-blue;
+    font-size: 1.5rem;
+    line-height: 2.333;
+    margin: 10px 0;
+    max-width: 326px;
+  }
+  button.submit {
+    flex: 0.5 1 50%;
+    background: $color-navy-blue;
+    color: $color-white;
+    font-size: 2.1875rem;
+    line-height: 1.08;
+    max-width: 240px;
+    text-transform: none;
+  }
+}
+
+.map {
+  height: 100%;
 }
