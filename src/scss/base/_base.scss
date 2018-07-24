@@ -69,3 +69,12 @@ hr {
   width: 100%;
   max-width: calc(80%);
 }
+
+.wrap {
+  padding: 0 10px;
+  @media screen and (min-width: $break-desktopSmall) {
+    margin: 0 auto;
+    max-width: 80%;
+  }
+}
+
