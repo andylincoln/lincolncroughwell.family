@@ -9,24 +9,34 @@
   align-items: center;
 
   h3 {
+    display: block;
     color: $color-white;
     font-family: $font-title;
     line-height: 1.1;
     font-weight: normal;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    max-width: 425px;
     text-align: center;
     @media screen and (min-width: $break-desktopSmall) {
+      max-width: 100%;
       text-align: left;
     }
   }
 
   h6 {
+    display: block;
     color: $color-white;
     font-family: $font-global;
     font-size: 2.1875rem;
     line-height: 1.08;
     font-weight: normal;
-    margin-bottom: 10px;
+    margin: 10px auto;
+    max-width: 425px;
+    text-align: center;
+    @media screen and (min-width: $break-desktopSmall) {
+      max-width: 100%;
+      text-align: left;
+    }
   }
 
   a {
@@ -65,7 +75,7 @@
   ul {
     padding: 0;
     margin: 0 auto;
-    max-width: 300px;
+    max-width: 380px;
     li {
       margin: 10px auto;
       text-align: left;
@@ -83,10 +93,13 @@
 
     @media screen and (min-width: $break-desktopSmall) {
       max-width: 425px;
+      max-width: 100%;
     }
   }
 
   .social-media {
+    max-width: 100%;
+    margin: 0 auto;
     .wrap {
       display: flex;
       flex-flow: row wrap;
