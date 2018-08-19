@@ -9,7 +9,8 @@ fieldset {
 
 form {
   margin: -12.5px auto;
-  label {
+  label,
+  legend {
     display: block;
     color: $color-white;
     font-family: $font-global;
@@ -17,6 +18,7 @@ form {
     line-height: 1.08;
     margin: 12.5px auto;
     max-width: 600px;
+    width: 100%;
 
     span {
       display: block;
@@ -24,8 +26,8 @@ form {
   }
 }
 
-input[type="text"],
-input[type="email"] {
+input[type='text'],
+input[type='email'] {
   font-size: 1rem;
   line-height: 2;
   padding: 0 0.5em;
@@ -37,7 +39,7 @@ input[type="email"] {
   }
 }
 
-[type="submit"] {
+[type='submit'] {
   display: block;
   cursor: pointer;
   border: 1px solid $color-white;
