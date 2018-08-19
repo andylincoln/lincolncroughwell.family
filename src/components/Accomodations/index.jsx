@@ -12,14 +12,14 @@ export default class Accomodations extends Component {
       subheading: 'From 495:',
       description:
         'The wedding ceremony will begin at 4:00pm in the little theater of the historic Lowell Memorial Auditorium. A cocktail hour will follow so you can start partying while we get our photos taken.',
-      place_id: '',
+      place_id: 'ChIJU9dRsWQH44kRwqLjWNgj_Ck'
     }
     const reception = {
       heading: 'Directions to the Reception:',
       subheading: 'From 495:',
       description:
         'The wedding ceremony will begin at 4:00pm in the little theater of the historic Lowell Memorial Auditorium. A cocktail hour will follow so you can start partying while we get our photos taken.',
-      place_id: '',
+      place_id: 'ChIJNw0xCTyk44kROqVA-dy7sC4'
     }
 
     return (
@@ -65,7 +65,7 @@ const DirectionsForm = () => {
   )
 }
 
-const DirectionsBlock = ({ heading, subheading, description }) => {
+const DirectionsBlock = ({ heading, subheading, description, place_id }) => {
   return (
     <div className="directions-block">
       <div className="steps">
@@ -79,7 +79,7 @@ const DirectionsBlock = ({ heading, subheading, description }) => {
             width="600"
             height="450"
             className="map-iframe"
-            src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNw0xCTyk44kROqVA-dy7sC4&key=${GOOGLE_MAPS_API_KEY}`}
+            src={`https://www.google.com/maps/embed/v1/place?q=place_id:${place_id}&key=${GOOGLE_MAPS_API_KEY}`}
             allowFullScreen
           />
         </div>
