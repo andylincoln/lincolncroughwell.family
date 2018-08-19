@@ -24,9 +24,10 @@ const WeddingDetailsPage = () => (
       <div>
         <span className="h1">Hotel</span>
         <p>
-          We have blocked some rooms for you at the UMass Lowell Inn and
-          Conference Center. Its in walking distance from the venue! When you
-          reserve your room mention that its our wedding.
+          TODO We have blocked some rooms for you at the Holiday Inn in
+          Tewksbury and Conference Center. Its a short drive from both the
+          ceremony and the reception. When you reserve your room mention that
+          its for our wedding.
         </p>
         <a href="tel:" className="phone-number">
           Call 555-555-5555
@@ -34,12 +35,7 @@ const WeddingDetailsPage = () => (
       </div>
       <div>
         <span className="h1">Transportation</span>
-        <p>
-          Although you can walk fromt he hotel to the venue, we understand that
-          if its your first time in the Mill City it can be a little
-          intimidating so we’ll have a shuttle that will make rounds from the
-          hotel to the venue throughout the course of the night
-        </p>
+        <p>TODO Transportation</p>
       </div>
     </TwoCol>
     <Divider />
@@ -64,8 +60,8 @@ const WeddingDetailsPage = () => (
           <li>Anthony Ferranti</li>
           <li>Thomas Emery</li>
           <li>Miguel Landestoy</li>
-          <li>William McAndrews</li>
           <li>Alexander Whiting</li>
+          <li>William McAndrews</li>
         </ul>
       </div>
     </TwoCol>
