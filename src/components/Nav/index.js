@@ -62,19 +62,6 @@ export default class Nav extends React.Component {
               Registry
             </Link>
           </li>
-          <li>
-            <Link to="/our-story" className={this.currentPage('/our-story')}>
-              Our Story
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/things-to-do"
-              className={this.currentPage('/things-to-do')}
-            >
-              Around Lowell
-            </Link>
-          </li>
         </ul>
       </nav>
     )
