@@ -11,21 +11,22 @@ export default class Accomodations extends Component {
       heading: 'Directions to the Ceremony:',
       subheading: 'From 495:',
       description:
-        'The wedding ceremony will begin at 4:00pm in the little theater of the historic Lowell Memorial Auditorium. A cocktail hour will follow so you can start partying while we get our photos taken.',
-      place_id: 'ChIJU9dRsWQH44kRwqLjWNgj_Ck'
+        'TODO Ceremony Descriptiuon at the Methuen Memorial Music Hall',
+      place_id: 'ChIJU9dRsWQH44kRwqLjWNgj_Ck',
+      maps_direction_slug: 'Methuen+Memorial+Music+Hall'
     }
     const reception = {
       heading: 'Directions to the Reception:',
       subheading: 'From 495:',
       description:
-        'The wedding ceremony will begin at 4:00pm in the little theater of the historic Lowell Memorial Auditorium. A cocktail hour will follow so you can start partying while we get our photos taken.',
-      place_id: 'ChIJNw0xCTyk44kROqVA-dy7sC4'
+        'TODO description for the reception at the Lowell Memorial Auditorium',
+      place_id: 'ChIJNw0xCTyk44kROqVA-dy7sC4',
+      maps_direction_slug: 'Lowell+Memorial+Auditorium'
     }
 
     return (
       <section className="accomodations">
         <div className="wrap">
-          <DirectionsForm> </DirectionsForm>
           <DirectionsBlock {...ceremony}> </DirectionsBlock>
           <DirectionsBlock {...reception}> </DirectionsBlock>
           {this.props.children}
@@ -65,13 +66,25 @@ const DirectionsForm = () => {
   )
 }
 
-const DirectionsBlock = ({ heading, subheading, description, place_id }) => {
+const DirectionsBlock = ({
+  heading,
+  subheading,
+  description,
+  place_id,
+  maps_direction_slug
+}) => {
   return (
     <div className="directions-block">
       <div className="steps">
         <span className="h1">{heading}</span>
         <span className="h2">{subheading}</span>
         <p>{description}</p>
+        <a
+          href={`https://www.google.com/maps?saddr=My+Location&daddr=${maps_direction_slug}`}
+          className="directions-link"
+        >
+          Get Directions
+        </a>
       </div>
       <div className="map-wrapper">
         <div className="responsive-iframe-wrapper">

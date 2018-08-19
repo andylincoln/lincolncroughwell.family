@@ -132,3 +132,17 @@
     }
   }
 }
+
+.directions-link {
+  display: block;
+  border-radius: 6px;
+  color: $color-white;
+  background: $color-navy-blue;
+  font-size: 1.75rem;
+  margin: 0 auto;
+  padding: 0.25em 0.5em;
+  line-height: 1.08;
+  max-width: 240px;
+  text-align: center;
+  text-transform: none;
+}
