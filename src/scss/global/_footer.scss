@@ -9,30 +9,43 @@
   align-items: center;
 
   h3 {
+    display: block;
     color: $color-white;
     font-family: $font-title;
     line-height: 1.1;
     font-weight: normal;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    max-width: 425px;
     text-align: center;
     @media screen and (min-width: $break-desktopSmall) {
+      max-width: 100%;
       text-align: left;
     }
   }
 
   h6 {
+    display: block;
     color: $color-white;
     font-family: $font-global;
     font-size: 2.1875rem;
     line-height: 1.08;
     font-weight: normal;
-    margin-bottom: 10px;
+    margin: 10px auto;
+    max-width: 425px;
+    text-align: center;
+    @media screen and (min-width: $break-desktopSmall) {
+      max-width: 100%;
+      text-align: left;
+    }
   }
 
   a {
     color: $color-white;
     font-size: 1.5rem;
     line-height: 1;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: left;
 
     &:hover,
     &:focus,
@@ -40,6 +53,19 @@
       color: $color-white;
       text-decoration: underline;
     }
+    .icon {
+      max-width: 40px;
+      max-height: 40px;
+    }
+    span {
+      padding-left: 10px;
+    }
+    .icon,
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
     @media screen and (min-width: $break-desktopSmall) {
       font-size: 2.1875rem;
       line-height: 1.08;
@@ -48,26 +74,38 @@
 
   ul {
     padding: 0;
+    margin: 0 auto;
+    max-width: 380px;
     li {
+      margin: 10px auto;
+      text-align: left;
+    }
+    @media screen and (min-width: $break-desktopSmall) {
+      max-width: none;
     }
   }
 
-  div.contact-form {
+  .contact-form {
     margin: 0 auto;
     width: 100%;
     max-width: calc(100% - 20px);
+    text-align: left;
 
     @media screen and (min-width: $break-desktopSmall) {
       max-width: 425px;
+      max-width: 100%;
     }
   }
 
   .social-media {
+    max-width: 100%;
+    margin: 0 auto;
     .wrap {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
       align-items: baseline;
+      text-align: left;
     }
   }
 
@@ -77,23 +115,28 @@
     width: 100%;
     max-width: calc(100% - 20px);
     padding: 0;
+    text-align: center;
 
     @media screen and (min-width: $break-desktopSmall) {
       margin: 0 auto;
       flex: 0 1 50%;
       padding: 0 25px;
       width: 50%;
-      max-width: 500px;
+      max-width: 600px;
     }
   }
 
   .footer-top {
     position: relative;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: space-between;
     align-items: baseline;
     padding: 0 25px;
+
+    @media screen and (min-width: $break-tabletSmall) {
+      flex-flow: row wrap;
+    }
 
     @media screen and (min-width: $break-desktopSmall) {
       padding: 50px 12.5px;

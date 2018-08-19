@@ -3,6 +3,10 @@ nav.main-navigation {
   width: 100%;
   background: none;
 
+  @media screen and (min-width: $break-desktopSmall) {
+    padding: 0 0 0 70px;
+  }
+
   ul.menu {
     display: none;
     position: fixed;
@@ -30,8 +34,18 @@ nav.main-navigation {
       }
     }
   }
+
   a {
     display: inline-block;
+    color: $color-white;
+    font-size: 2.1875rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-off-white;
+      text-decoration: underline;
+    }
     @media screen and (min-width: $break-desktopSmall) {
       font-size: 2.1875rem;
       line-height: 1.08;
@@ -59,7 +73,7 @@ nav.main-navigation {
       display: none;
       width: 50px;
     }
-    &[aria-expanded="true"] {
+    &[aria-expanded='true'] {
       position: absolute;
       left: auto;
       right: 20px;
@@ -71,14 +85,14 @@ nav.main-navigation {
         display: none;
       }
     }
-    &[aria-expanded="false"] + .menu {
+    &[aria-expanded='false'] + .menu {
       display: none;
       @media screen and (min-width: $break-desktopSmall) {
         display: block;
       }
     }
 
-    &[aria-expanded="true"] + .menu {
+    &[aria-expanded='true'] + .menu {
       display: block;
       left: 0;
       z-index: 1;
@@ -88,13 +102,6 @@ nav.main-navigation {
       display: none;
     }
   }
-}
-
-.main-navigation--front-page {
-  @media screen and (min-width: $break-desktopSmall) {
-    padding: 0 0 0 70px;
-  }
-
   ul {
     li {
       margin-right: 15px;
@@ -106,16 +113,40 @@ nav.main-navigation {
       }
     }
   }
+}
 
+.main-navigation.main-navigation--interior {
+  background: $color-white;
+  color: $color-navy-blue;
   a {
-    color: $color-white;
-    font-size: 2.1875rem;
+    @media screen and (min-width: $break-desktopSmall) {
+      color: $color-navy-blue;
 
-    &:hover,
-    &:active,
-    &:focus {
-      color: $color-off-white;
-      text-decoration: underline;
+      &.page--home {
+        img {
+          height: auto;
+          max-width: 80px;
+        }
+      }
+
+      &.page--current {
+        color: $color-copper;
+        font-weight: bold;
+      }
+
+      &:hover,
+      &:active {
+        color: $color-navy-blue-2;
+      }
+
+      &.page--rsvp {
+        border: 1px solid $color-navy-blue;
+        border-radius: 8px;
+        background: $color-navy-blue;
+        color: $color-white;
+        font-weight: normal;
+        padding: 15px 30px;
+      }
     }
   }
 }

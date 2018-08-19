@@ -1,0 +1,227 @@
+// _agenda.scss
+
+.agenda {
+  @include clearfix();
+  background: $color-off-white;
+  padding: 0 20px;
+}
+
+.agenda-item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: transparentize($color: black, $amount: 0.84) 6px 4px 6px;
+
+  @media screen and (min-width: $break-mobileLarge) {
+    background: $color-white;
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: $break-tabletSmall) {
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $break-desktopSmall) {
+    margin: 40px auto;
+  }
+
+  &.image .event-details {
+    @media screen and (min-width: $break-tabletSmall) {
+      flex: 0.5 1 50%;
+      width: calc(50%);
+    }
+  }
+  &.icon .event-details {
+    @media screen and (min-width: $break-tabletSmall) {
+      flex: 0.7 1 70%;
+      width: calc(70%);
+    }
+  }
+
+  .event-image {
+    @media screen and (min-width: $break-tabletSmall) {
+      flex: 0.5 1 50%;
+      width: calc(50%);
+    }
+  }
+  .event-icon {
+    padding: 20px;
+    background: $color-white;
+    width: 100%;
+    @media screen and (min-width: $break-tabletSmall) {
+      flex: 0.3 1 30%;
+      width: calc(30%);
+    }
+    .icon {
+      display: block;
+      fill: black;
+      max-width: 120px;
+      margin: 0 auto;
+    }
+  }
+  .event-details {
+    background: $color-white;
+    padding: 20px;
+    height: calc(100%);
+    width: 100%;
+
+    @media screen and (min-width: $break-tabletSmall) {
+      padding: 40px;
+    }
+    .event-name {
+      color: $color-black;
+      font-weight: normal;
+      line-height: 1;
+      margin: auto;
+      @media screen and (min-width: $break-desktopSmall) {
+        font-size: 2.1875rem;
+      }
+    }
+    .event-time {
+      color: $color-black;
+      margin: auto;
+      font-size: 1rem;
+      line-height: 1.2;
+      @media screen and (min-width: $break-desktopSmall) {
+        font-size: 1.5rem;
+      }
+    }
+    .event-location {
+      color: $color-black;
+      margin: auto;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: bold;
+      line-height: 1.2;
+      @media screen and (min-width: $break-desktopSmall) {
+        font-size: 1.5rem;
+      }
+    }
+    .event-description {
+      font-size: 1rem;
+      line-height: 1.1;
+      margin: 0;
+      @media screen and (min-width: $break-desktopSmall) {
+        font-size: 1.5rem;
+      }
+    }
+    .action {
+      &::after {
+        content: '>';
+        margin-left: 0.25em;
+      }
+      color: $color-copper;
+      font-size: 1rem;
+      line-height: 1.2;
+
+      @media screen and (min-width: $break-mobileLarge) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.date-wrapper {
+  position: relative;
+  margin: 120px auto;
+
+  transition: width 0.2s ease-in;
+  z-index: 0;
+  @media screen and (min-width: $break-desktopSmall) {
+    margin: 160px auto;
+  }
+  @media screen and (min-width: $break-desktopMedium) {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  @media screen and (min-width: $break-desktopLarge) {
+    max-width: 1200px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    z-index: 0;
+    height: calc(100% + 120px);
+    content: '';
+    border-left: 1px solid $color-copper;
+    z-index: 1;
+
+    @media screen and (min-width: $break-desktopSmall) {
+      top: -80px;
+    }
+
+    @media screen and (min-width: $break-desktopMedium) {
+      left: -80px;
+      top: 0;
+      height: calc(100%);
+    }
+  }
+  &:last-of-type::before {
+    display: none;
+  }
+
+  time.date {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    background: $color-forest-green;
+    border-radius: 50%;
+    color: $color-white;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    padding: 1em;
+    transition: height 0.1s ease-in, width 0.1s ease-in, font-size 0.1s ease-in;
+
+    @media screen and (min-width: $break-mobileLarge) {
+      height: 100px;
+      width: 100px;
+      padding: 1em;
+    }
+
+    @media screen and (min-width: $break-desktopSmall) {
+      top: -80px;
+    }
+
+    @media screen and (min-width: $break-desktopMedium) {
+      left: -80px;
+      top: 0;
+    }
+
+    .month {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.11;
+      text-transform: uppercase;
+
+      @media screen and (min-width: $break-mobileLarge) {
+        font-size: 1.5rem;
+        line-height: 1.08;
+      }
+    }
+
+    .day {
+      display: block;
+      font-family: $font-abril-fatface;
+      font-size: 1.75rem;
+      font-style: italic;
+      line-height: 1.1;
+
+      @media screen and (min-width: $break-mobileLarge) {
+        font-size: 2.4375rem;
+      }
+    }
+  }
+}

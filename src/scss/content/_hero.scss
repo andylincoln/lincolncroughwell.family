@@ -1,5 +1,7 @@
-.landing-hero {
+.hero {
   position: relative;
+  background-color: $color-navy-blue;
+  color: $color-white;
   padding: 100px 30px 50px 30px;
   text-align: center;
 
@@ -33,31 +35,34 @@
       z-index: 0;
     }
   }
-}
 
-.front-page-hero--heading {
-  color: $color-white;
-  font-size: 2.5625rem;
-  line-height: 1.1;
-  @media screen and (min-width: $break-desktopSmall) {
-    font-size: 5.125rem;
-  }
-}
+  &.green {
+    background: $color-forest-green;
+    color: $color-white;
+    h1 {
+      color: inherit;
+      font-style: normal;
+      font-size: 2.5625rem;
+      word-break: break-all;
+      word-wrap: break-word;
 
-.front-page-hero--subheading {
-  color: $color-white;
-  width: 100%;
-  font-size: 1.3125rem;
-  text-transform: none;
-  @media screen and (min-width: $break-desktopSmall) {
-    font-size: 2.625rem;
-  }
-}
+      @media screen and (min-width: $break-desktopSmall) {
+        font-size: 5.75rem;
+      }
+    }
+    h2 {
+      color: inherit;
+      font-style: normal;
+      font-size: 1.3125rem;
 
-.front-page-hero--monogram {
-  max-width: 120px;
-  margin: 0 auto;
-  @media screen and (min-width: $break-desktopSmall) {
-    max-width: 200px;
+      &.hero--subheading {
+        font-weight: normal;
+        text-transform: none;
+      }
+
+      @media screen and (min-width: $break-desktopSmall) {
+        font-size: 2.5625rem;
+      }
+    }
   }
 }
