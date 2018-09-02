@@ -1,6 +1,7 @@
 .rsvp-hero {
   background: $color-off-white;
   color: $color-navy-blue;
+  position: relative;
 }
 
 .rsvp-hero--heading {
@@ -13,4 +14,56 @@
   text-transform: none;
   margin: 0 auto;
   max-width: 650px;
+}
+.rsvp-hero .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-width: 1720px;
+  margin: 0 auto;
+  @media screen and (min-width: $break-desktopSmall) {
+    overflow: visible;
+  }
+}
+
+.rsvp-hero .flowers {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 75%;
+  @media screen and (min-width: $break-desktopSmall) {
+    top: 110px;
+    transform: none;
+  }
+  &.flowers-left {
+    left: -25%;
+
+    @media screen and (min-width: $break-tabletSmall) {
+      width: 50%;
+    }
+    @media screen and (min-width: $break-desktopSmall) {
+      top: 120px;
+      left: 20px;
+      width: 25%;
+    }
+  }
+
+  &.flowers-right {
+    right: -25%;
+    @media screen and (min-width: $break-tabletSmall) {
+      width: 50%;
+    }
+    @media screen and (min-width: $break-desktopSmall) {
+      top: 120px;
+      right: 20px;
+      width: 25%;
+    }
+  }
 }
