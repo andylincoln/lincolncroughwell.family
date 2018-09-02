@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import flowers_left from '../../images/svg/rsvp_flowers_left.svg'
-import flowers_right from '../../images/svg/rsvp_flowers_right.svg'
+import flowers from '../../images/svg/flowers.svg'
 export default class RSVPHero extends Component {
   render() {
     return (
@@ -10,10 +9,10 @@ export default class RSVPHero extends Component {
         <h2 className="rsvp-hero--subheading">{this.props.subheading}</h2>
         <div className="overlay">
           <div className="flowers flowers-left">
-            <img src={flowers_left} alt="An illustration of flowers" />
+            <img src={flowers} alt="An illustration of flowers" />
           </div>
           <div className="flowers flowers-right">
-            <img src={flowers_right} alt="An illustration of flowers" />
+            <img src={flowers} alt="An illustration of flowers" />
           </div>
         </div>
       </div>
