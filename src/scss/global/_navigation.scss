@@ -63,6 +63,8 @@ nav.main-navigation {
     max-width: 50px;
     svg.icon {
       pointer-events: none;
+      fill: $color-navy-blue;
+      stroke: $color-navy-blue;
       max-height: 50px;
       max-width: 50px;
     }
