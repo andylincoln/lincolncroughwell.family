@@ -37,7 +37,14 @@ nav.main-navigation {
       }
       @media screen and (min-width: $break-desktopSmall) {
         display: inline-block;
+        vertical-align: middle;
         margin-right: 30px;
+        &.page--home {
+          width: 80px;
+          &::before {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -139,10 +146,9 @@ nav.main-navigation {
       color: $color-navy-blue;
 
       &.page--home {
-        img {
-          height: auto;
-          max-width: 80px;
-        }
+        display: block;
+        width: 100%;
+        max-width: 100%;
       }
 
       &.page--current {
