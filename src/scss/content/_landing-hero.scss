@@ -3,34 +3,63 @@
   padding: 100px 30px 50px 30px;
   text-align: center;
 
-  &::before {
-    content: '';
-    background: left bottom/auto 75% url('../images/svg/fern.svg') no-repeat;
-    height: 100%;
-    width: 100%;
+  .overlay {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
-    pointer-events: none;
+    left: 0;
     z-index: 0;
-  }
-  &::after {
-    display: none;
+    pointer-events: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 1720px;
+    margin: 0 auto;
+
     @media screen and (min-width: $break-desktopSmall) {
-      display: block;
-      content: '';
-      background: right top/auto 75% url('../images/svg/fern.svg') no-repeat;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      pointer-events: none;
-      z-index: 0;
+      overflow: visible;
+    }
+  }
+
+  .fern {
+    position: absolute;
+    top: 50%;
+    width: 75%;
+
+    &.fern-left {
+      top: 75%;
+      left: -25%;
+      transform: translateY(-50%);
+
+      @media screen and (min-width: $break-tabletSmall) {
+        width: 50%;
+      }
+
+      @media screen and (min-width: $break-desktopSmall) {
+        top: auto;
+        left: 20px;
+        bottom: 0;
+        transform: none;
+        width: 25%;
+      }
+    }
+
+    &.fern-right {
+      top: 25%;
+      right: -25%;
+      transform: translateY(-50%) scale(-1, -1);
+
+      @media screen and (min-width: $break-tabletSmall) {
+        width: 50%;
+      }
+
+      @media screen and (min-width: $break-desktopSmall) {
+        top: 0;
+        right: 20px;
+        transform: scale(-1, 1) rotate(-270deg);
+        width: 25%;
+      }
     }
   }
 }
