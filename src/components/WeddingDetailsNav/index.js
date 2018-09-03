@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
 
-if (typeof document !== 'undefined') {
-  let Choices = require('choices.js')
-}
-
 export default class WeddingDetailsNav extends Component {
   constructor(props) {
     super(props)
     this.selectRef = null
-    this.setSelectRef = (element) => {
+    this.setSelectRef = element => {
       this.selectRef = element
     }
   }
@@ -26,24 +22,24 @@ export default class WeddingDetailsNav extends Component {
             value: 'agenda',
             label: 'Agenda',
             // selected: true,
-            disabled: false,
+            disabled: false
           },
           {
             value: 'accomodations',
             label: 'Accomodations',
-            disabled: false,
+            disabled: false
           },
           {
             value: 'directions',
             label: 'Directions',
-            disabled: false,
+            disabled: false
           },
           {
             value: 'wedding-party',
             label: 'Wedding Party',
-            disabled: false,
-          },
-        ],
+            disabled: false
+          }
+        ]
       })
     } catch (e) {
       console.log(e)
