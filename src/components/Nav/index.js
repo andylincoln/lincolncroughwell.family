@@ -1,14 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
 import Icon from '../Icon/'
-// import monogram from '../../images/svg/monogram.svg';
+import monogram_black from '../../images/svg/monogram_black.svg'
 
 export default class Nav extends React.Component {
-  componentDidMount() {
-    console.log(window.location.pathname)
-  }
-
   currentPage(path) {
     if (typeof window !== 'undefined' && window.location.pathname == path) {
       return 'page--current'
@@ -36,9 +31,9 @@ export default class Nav extends React.Component {
           <Icon name="close" />
         </button>
         <ul className="menu">
-          <li>
+          <li className="page--home">
             <Link to="/" className="page--home">
-              <img src="" alt="Home" />
+              <img src={monogram_black} alt="Home" />
             </Link>
           </li>
           <li>
