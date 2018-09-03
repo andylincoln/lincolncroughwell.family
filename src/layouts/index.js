@@ -10,13 +10,20 @@ const TemplateWrapper = ({ children }) => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="robots" content="noindex" />
       <link rel="stylesheet" href="https://use.typekit.net/ivl3jxo.css" />
+      <title>Andy &amp; Sarah's Wedding Website</title>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/choices.js/3.0.4/choices.min.js"
+        integrity="sha256-fn42zDIZe73UQx/PAcZ9Wmq4/cUaiIzaW+wGLNuXMWI="
+        crossorigin="anonymous"
+        defer
+      />
     </Helmet>
     {children()}
   </div>
 )
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.func
 }
 
 export default TemplateWrapper

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Choices from 'choices.js'
 
 export default class WeddingDetailsNav extends Component {
   constructor(props) {
