@@ -4,7 +4,7 @@ const RSVPForm = () => {
     <div className="rsvp-form-block">
       <form
         className="rsvp-form"
-        name="contact"
+        name="rsvp"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
