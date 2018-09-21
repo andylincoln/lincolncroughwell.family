@@ -16,6 +16,12 @@
 
   &--heading {
     font-family: $font-mr-eaves-modern;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &--button {
+    margin-bottom: 20px;
   }
 
   @media screen and (min-width: $break-desktopSmall) {
