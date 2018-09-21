@@ -20,7 +20,6 @@ export default class MenuIcon extends React.Component {
 			>
 				<g transform="translate(-30 15)">
 					<polygon
-						fill="white"
 						points="233,22 211,0 117,94 22,0 0,22 94,117 0,211 22,233 117,139 211,233 233,211 139,117 "
 					/>
 				</g>

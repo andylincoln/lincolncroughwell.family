@@ -21,7 +21,11 @@ nav.main-navigation {
     margin: 0;
     padding: 20px;
     z-index: 1;
-
+    .page--home {
+      img {
+        display: none;
+      }
+    }
     @media screen and (min-width: $break-desktopSmall) {
       background: none;
       position: static;
@@ -44,6 +48,9 @@ nav.main-navigation {
         }
         &.page--home {
           width: 80px;
+          img {
+            display: block;
+          }
           &::before {
             display: none;
           }
@@ -196,6 +203,10 @@ nav.main-navigation.main-navigation {
           fill: $color-navy-blue;
           stroke: $color-navy-blue;
         }
+        // &[aria-expanded='true'] {
+        //   fill: $color-navy-blue;
+        //   stroke: $color-navy-blue;
+        // }
       }
     }
   }
