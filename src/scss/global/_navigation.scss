@@ -2,6 +2,7 @@ nav.main-navigation {
   display: block;
   width: 100%;
   background: none;
+  background: $color-navy-blue;
 
   @media screen and (min-width: $break-desktopSmall) {
     padding: 0 0 0 70px;
@@ -21,7 +22,11 @@ nav.main-navigation {
     margin: 0;
     padding: 20px;
     z-index: 1;
-
+    .page--home {
+      img {
+        display: none;
+      }
+    }
     @media screen and (min-width: $break-desktopSmall) {
       background: none;
       position: static;
@@ -39,8 +44,14 @@ nav.main-navigation {
         display: inline-block;
         vertical-align: middle;
         margin-right: 30px;
+        &.home {
+          display: none;
+        }
         &.page--home {
           width: 80px;
+          img {
+            display: block;
+          }
           &::before {
             display: none;
           }
@@ -173,11 +184,31 @@ nav.main-navigation {
   }
 }
 
-nav.main-navigation.main-navigation--front-page {
-  .menu-button {
-    svg.icon {
-      fill: $color-white;
-      stroke: $color-white;
+nav.main-navigation.main-navigation {
+  &--front-page,
+  &--interior {
+    .menu-button {
+      svg.icon {
+        fill: $color-white;
+        stroke: $color-white;
+      }
+    }
+  }
+}
+
+.rsvp-page {
+  nav.main-navigation.main-navigation {
+    &--interior {
+      .menu-button {
+        svg.icon {
+          fill: $color-navy-blue;
+          stroke: $color-navy-blue;
+        }
+        // &[aria-expanded='true'] {
+        //   fill: $color-navy-blue;
+        //   stroke: $color-navy-blue;
+        // }
+      }
     }
   }
 }

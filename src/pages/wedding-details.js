@@ -9,6 +9,10 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TwoCol from '../components/TwoCol'
 
+const holiday_inn_phone = {
+  tel: 'tel:+19786409000',
+  label: '978-640-9000'
+}
 const WeddingDetailsPage = () => (
   <div>
     <Header />
@@ -24,13 +28,12 @@ const WeddingDetailsPage = () => (
       <div>
         <span className="h1">Hotel</span>
         <p>
-          TODO We have blocked some rooms for you at the Holiday Inn in
-          Tewksbury and Conference Center. Its a short drive from both the
-          ceremony and the reception. When you reserve your room mention that
-          its for our wedding.
+          We have blocked some rooms for you at the UMass Lowell Inn and
+          Conference Center. Its in walking distance from the venue! When you
+          reserve your room mention that its our wedding.
         </p>
-        <a href="tel:" className="phone-number">
-          Call 555-555-5555
+        <a href={holiday_inn_phone.tel} className="phone-number">
+          Call {holiday_inn_phone.label}
         </a>
       </div>
       <div>

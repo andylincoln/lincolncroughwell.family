@@ -34,6 +34,7 @@ export default class Nav extends React.Component {
           <li className="page--home">
             <Link to="/" className="page--home">
               <img src={monogram_black} alt="Home" />
+              <span className="small-screen">Home</span>
             </Link>
           </li>
           <li>
