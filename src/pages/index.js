@@ -15,7 +15,7 @@ const polaroid_announcement = {
   image: {
     src: image2x,
     src2x: image2x,
-    alt: '',
+    alt: ''
   },
   icon: 'fireworks',
   heading: 'Sarah and Andy are getting married!',
@@ -24,14 +24,14 @@ const polaroid_announcement = {
   alignment: 'left',
   button: {
     label: 'Our Story',
-    href: '/our-story',
-  },
+    href: '/our-story'
+  }
 }
 const polaroid_location = {
   image: {
     src: auditorium,
     src2x: auditorium,
-    alt: '',
+    alt: ''
   },
   icon: 'location',
   heading: 'The Wedding',
@@ -40,16 +40,16 @@ const polaroid_location = {
   alignment: 'right',
   button: {
     label: 'More Info',
-    href: '/',
+    href: '/'
   },
-  texture: 'monogram',
+  texture: 'monogram'
 }
 const polaroid_accomodations = {
   theme: 'dark',
   image: {
     src: icc_hotel_image,
     src2x: icc_hotel_image,
-    alt: '',
+    alt: ''
   },
   icon: 'hotel',
   heading: 'Accomodations',
@@ -57,14 +57,14 @@ const polaroid_accomodations = {
     'You have a couple options for accomodations. You can book at the UMass Inn and Conference Center or at the Fairfield. These rooms are based on availability so don’t wait to book!',
   links: [
     { label: 'Book at the Inn and Conference Center', href: '/' },
-    { label: 'Book at the Fairfield', href: '/' },
+    { label: 'Book at the Fairfield', href: '/' }
   ],
   alignment: 'left',
   button: {
     label: 'More Info',
-    href: '/',
+    href: '/'
   },
-  texture: 'fern',
+  texture: 'fern'
 }
 
 const IndexPage = () => (
