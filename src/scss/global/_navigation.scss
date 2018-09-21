@@ -39,6 +39,9 @@ nav.main-navigation {
         display: inline-block;
         vertical-align: middle;
         margin-right: 30px;
+        &.home {
+          display: none;
+        }
         &.page--home {
           width: 80px;
           &::before {

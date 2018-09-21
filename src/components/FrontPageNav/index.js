@@ -27,6 +27,9 @@ export default class FrontPageNav extends React.Component {
           <Icon name="close" />
         </button>
         <ul className="menu">
+          <li className="home">
+            <Link to="/">Home</Link>
+          </li>
           <li>
             <Link to="/rsvp">RSVP</Link>
           </li>
