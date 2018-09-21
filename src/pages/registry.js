@@ -15,8 +15,9 @@ const GIVE_A_GIFT = 'Give a Gift'
 const DONATE = 'Donate via PayPal'
 const IKEA_URL =
   'https://info.ikea-usa.com/giftregistry/en-us/registry/a08a4c5a-8582-4656-ac1d-ca1d6641aefb'
-const PAYPAL_URL = ''
-const CRATE_BARREL_URL = ''
+const PAYPAL_URL = 'https://paypal.me/lincolncroughwell'
+const CRATE_BARREL_URL =
+  'https://www.crateandbarrel.com/gift-registry/andrew-lincoln-and-sarah-croughwell/r5869521'
 const polaroid_crate_and_barrel = {
   image: {
     src: crate_and_barrel,
