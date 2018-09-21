@@ -68,7 +68,7 @@ const polaroid_rome = {
   }
 }
 const RegistryPage = () => (
-  <div>
+  <div className="registry-page">
     <Header />
     <Hero
       heading="Registry"
