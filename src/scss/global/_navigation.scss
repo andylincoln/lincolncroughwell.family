@@ -173,11 +173,27 @@ nav.main-navigation {
   }
 }
 
-nav.main-navigation.main-navigation--front-page {
-  .menu-button {
-    svg.icon {
-      fill: $color-white;
-      stroke: $color-white;
+nav.main-navigation.main-navigation {
+  &--front-page,
+  &--interior {
+    .menu-button {
+      svg.icon {
+        fill: $color-white;
+        stroke: $color-white;
+      }
+    }
+  }
+}
+
+.rsvp-page {
+  nav.main-navigation.main-navigation {
+    &--interior {
+      .menu-button {
+        svg.icon {
+          fill: $color-navy-blue;
+          stroke: $color-navy-blue;
+        }
+      }
     }
   }
 }

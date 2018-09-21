@@ -1,0 +1,37 @@
+.registry {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.registry-wrapper {
+  padding: 20px 0;
+  background: $color-off-white;
+}
+
+.registry .polaroid {
+  position: relative;
+  box-shadow: transparentize($color: black, $amount: 0.84) 6px 4px 6px;
+  margin: 20px auto;
+
+  &--heading {
+    font-family: $font-mr-eaves-modern;
+  }
+
+  @media screen and (min-width: $break-desktopSmall) {
+    margin: 40px auto;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    &--picture {
+      flex: 0.33 0.5 auto;
+      width: calc(50% - 4px);
+    }
+
+    &--content {
+      height: 100%;
+      flex: 0.33 0.5 auto;
+      width: calc(50% - 4px);
+    }
+  }
+}

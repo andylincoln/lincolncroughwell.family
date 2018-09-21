@@ -1,28 +1,30 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import Icon from '../Icon';
+import React from 'react'
+import Link from 'gatsby-link'
+import Icon from '../Icon'
 
 export default class Polaroid extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
   render() {
-    const theme = this.props.theme || 'light';
-    const image = this.props.image;
-    const icon = this.props.icon;
-    const heading = this.props.heading;
-    const body = this.props.body;
-    const button = this.props.button;
-    const alignment = this.props.alignment;
-    const links = this.props.links || [];
-    const texture = this.props.texture;
+    const theme = this.props.theme || 'light'
+    const image = this.props.image
+    const icon = this.props.icon
+    const heading = this.props.heading
+    const body = this.props.body
+    const button = this.props.button
+    const alignment = this.props.alignment
+    const links = this.props.links || []
+    const texture = this.props.texture
     return (
       <div className={`polaroid ${alignment} ${theme}`}>
         <div className="polaroid--picture">
-          <img src={image.src} alt={image.alt} />
-          <div className="icon-wrapper">
-            <Icon name={icon} />
-          </div>
+          <img src={image.src} alt={image.alt} srcSet={`${image.src2x} 2x`} />
+          {icon ? (
+            <div className="icon-wrapper">
+              <Icon name={icon} />
+            </div>
+          ) : null}
         </div>
         <div className={`polaroid--content ${texture}`}>
           <h3 className="polaroid--heading">{heading}</h3>
@@ -33,8 +35,8 @@ export default class Polaroid extends React.Component {
           </Link>
         </div>
       </div>
-    );
+    )
   }
 }
 
-React.propTypes = {};
+React.propTypes = {}

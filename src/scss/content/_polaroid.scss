@@ -6,6 +6,7 @@
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+  box-shadow: transparentize($color: black, $amount: 0.84) 6px 4px 6px;
 
   @media screen and (min-width: $break-desktopSmall) {
   }
