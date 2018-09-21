@@ -24,7 +24,11 @@
     max-width: 100%;
   }
 }
-
+.small-screen {
+  @media screen and (min-width: $break-desktopSmall) and (min-width: $break-desktopSmall) {
+    display: none;
+  }
+}
 .hidden,
 [hidden] {
   display: none !important;

@@ -2,6 +2,7 @@ nav.main-navigation {
   display: block;
   width: 100%;
   background: none;
+  background: $color-navy-blue;
 
   @media screen and (min-width: $break-desktopSmall) {
     padding: 0 0 0 70px;
