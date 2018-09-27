@@ -1,7 +1,7 @@
 import React from 'react'
 const RSVPForm = () => {
   return (
-    <div className="rsvp-form-block">
+    <div className="rsvp-block">
       <form
         className="rsvp-form"
         name="rsvp"
