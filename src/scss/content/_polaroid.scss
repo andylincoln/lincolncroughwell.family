@@ -53,6 +53,9 @@
     flex: 0.5 0.6 auto;
     @media screen and (min-width: $break-desktopSmall) {
       width: 50%;
+      img {
+        width: 100%;
+      }
     }
   }
 

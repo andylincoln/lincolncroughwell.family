@@ -9,7 +9,8 @@ import Polaroid from '../components/Polaroid'
 import image from '../static/andy_sarah_engagement_portrait.jpg'
 import image2x from '../static/andy_sarah_engagement_portrait@2x.jpg'
 import auditorium from '../static/auditorium@2x.jpg'
-import icc_hotel_image from '../static/umass-lowell-inn-and-conference-center-18.jpg'
+import hotel_image from '../static/holiday-inn.png'
+import hotel_image2x from '../static/holiday-inn@2x.png'
 
 const polaroid_announcement = {
   image: {
@@ -47,14 +48,14 @@ const polaroid_location = {
 const polaroid_accomodations = {
   theme: 'dark',
   image: {
-    src: icc_hotel_image,
-    src2x: icc_hotel_image,
+    src: hotel_image,
+    src2x: hotel_image2x,
     alt: ''
   },
   icon: 'hotel',
   heading: 'Accomodations',
   body:
-    'You have a couple options for accomodations. You can book at the UMass Inn and Conference Center or at the Fairfield. These rooms are based on availability so don’t wait to book!',
+    'We have blocked some rooms for you at the Holiday Inn in Tewksbury. If you want to stay call (978) 640-9000 and mention you are booking for the Croughwell/Lincoln Wedding. ',
   links: [
     { label: 'Book at the Inn and Conference Center', href: '/' },
     { label: 'Book at the Fairfield', href: '/' }
