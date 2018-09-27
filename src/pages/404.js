@@ -1,9 +1,15 @@
 import React from 'react'
-
+import Header from '../components/Header'
+import FrontPageHero from '../components/FrontPageHero'
+import Footer from '../components/Footer'
 const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  <div className="404-page">
+    <Header />
+    <FrontPageHero
+      heading="404 Page not found"
+      subheading={`Sorry about that! Looks like we screwed up somehow`}
+    />
+    <Footer />
   </div>
 )
 
