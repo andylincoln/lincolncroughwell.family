@@ -20,7 +20,7 @@ const RSVPForm = () => {
             <input type="email" className="email" name="email" required />
           </label>
           <div className="rsvp-attending">
-            <legend>Will You Be Joining Us?</legend>
+            <legend>Will you be joining us?</legend>
             <div className="radio">
               <input
                 type="radio"
@@ -66,7 +66,7 @@ const RSVPForm = () => {
         </fieldset>
         <fieldset>
           <legend>
-            <span>What Would You Like For Dinner?*</span>
+            <span>What would you like for dinner?*</span>
             <span className="description">
               Please select the meals for each member of your party.
             </span>
