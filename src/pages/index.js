@@ -61,10 +61,6 @@ const polaroid_accomodations = {
     { label: 'Book at the Fairfield', href: '/' }
   ],
   alignment: 'left',
-  button: {
-    label: 'More Info',
-    href: '/'
-  },
   texture: 'fern'
 }
 

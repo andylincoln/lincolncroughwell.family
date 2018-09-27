@@ -29,10 +29,11 @@ export default class Polaroid extends React.Component {
         <div className={`polaroid--content ${texture}`}>
           <h3 className="polaroid--heading">{heading}</h3>
           <p className="polaroid--body">{body}</p>
-          {/* {TODO ADD links} */}
-          <Link to={button.href} className="polaroid--button">
-            {button.label}
-          </Link>
+          {button ? (
+            <Link to={button.href} className="polaroid--button">
+              {button.label}
+            </Link>
+          ) : null}
         </div>
       </div>
     )
