@@ -22,11 +22,7 @@ const polaroid_announcement = {
   heading: 'Sarah and Andy are getting married!',
   body:
     'After nine years, including two band camps, senior prom, eleven snowboard trips, college, a long distance relationship, sixteen jobs, hundreds of movies, thousands of photos, and everyone we’ve ever met asking us when we were going to get hitched, its finally happening.',
-  alignment: 'left',
-  button: {
-    label: 'Our Story',
-    href: '/our-story'
-  }
+  alignment: 'left'
 }
 const polaroid_location = {
   image: {
@@ -41,7 +37,7 @@ const polaroid_location = {
   alignment: 'right',
   button: {
     label: 'More Info',
-    href: '/'
+    href: '/wedding-details'
   },
   texture: 'monogram'
 }
