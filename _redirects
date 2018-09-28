@@ -1,0 +1,7 @@
+# Redirect domain aliases to primary domain
+https://www.lincolncroughwell.family/* https://www.lincolncroughwell.com/:splat
+301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://lincolncroughwell.netlify.com/* https://www.lincolncroughwell.com/:splat
+301!
