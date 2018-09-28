@@ -16,6 +16,30 @@ export default class Polaroid extends React.Component {
     const alignment = this.props.alignment
     const links = this.props.links || []
     const texture = this.props.texture
+
+    const renderLink = button => {
+      if (button) {
+        if (button.href.startsWith('http')) {
+          return (
+            <a
+              href={button.href}
+              className="polaroid--button"
+              target="_blank"
+              rel="noref noopener"
+            >
+              {button.label}
+            </a>
+          )
+        } else {
+          return (
+            <Link to={button.href} className="polaroid--button">
+              {button.label}
+            </Link>
+          )
+        }
+      }
+      return null
+    }
     return (
       <div className={`polaroid ${alignment} ${theme}`}>
         <div className="polaroid--picture">
@@ -29,11 +53,7 @@ export default class Polaroid extends React.Component {
         <div className={`polaroid--content ${texture}`}>
           <h3 className="polaroid--heading">{heading}</h3>
           <p className="polaroid--body">{body}</p>
-          {button ? (
-            <Link to={button.href} className="polaroid--button">
-              {button.label}
-            </Link>
-          ) : null}
+          {renderLink(button)}
         </div>
       </div>
     )
