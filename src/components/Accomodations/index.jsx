@@ -11,7 +11,7 @@ export default class Accomodations extends Component {
       heading: 'Directions to the Ceremony:',
       subheading: 'From 495:',
       description:
-        'TODO Ceremony Descriptiuon at the Methuen Memorial Music Hall',
+        'From I-93, Take exit 47-48 for MA-213 E toward Methuen, continue onto MA-213 E, take exit 2 for MA-28 toward Methuen/Salem NH, turn right onto MA-28 S/Broadway, in 1/2 mile it is on the right.',
       place_id: 'ChIJU9dRsWQH44kRwqLjWNgj_Ck',
       maps_direction_slug: 'Methuen+Memorial+Music+Hall'
     }
@@ -19,7 +19,7 @@ export default class Accomodations extends Component {
       heading: 'Directions to the Reception:',
       subheading: 'From 495:',
       description:
-        'TODO description for the reception at the Lowell Memorial Auditorium',
+        'From the Methuen Memorial Music Hall, head southeast on Broadway toward E River Pl, turn right onto Oakland Ave, follow Lowell St and MA-110 W to Lowell, turn right onto the State Route 38 S/State Route 110 W ramp, at the traffic circle, take the 2nd exit onto Hunts Falls Bridge, turn right onto E Merrimack St and it is on the right.',
       place_id: 'ChIJNw0xCTyk44kROqVA-dy7sC4',
       maps_direction_slug: 'Lowell+Memorial+Auditorium'
     }

@@ -28,17 +28,23 @@ const WeddingDetailsPage = () => (
       <div>
         <span className="h1">Hotel</span>
         <p>
-          We have blocked some rooms for you at the UMass Lowell Inn and
-          Conference Center. Its in walking distance from the venue! When you
-          reserve your room mention that its our wedding.
+          We have blocked some rooms for you at the Holiday Inn in Tewksbury. If
+          you want to stay call the number below and mention you are booking for
+          the Croughwell/Lincoln Wedding.
         </p>
         <a href={holiday_inn_phone.tel} className="phone-number">
-          Call {holiday_inn_phone.label}
+          {holiday_inn_phone.label}
         </a>
       </div>
       <div>
-        <span className="h1">Transportation</span>
-        <p>TODO Transportation</p>
+        <span className="h1">Parking</span>
+        <p>
+          For the ceremony, a parking lot is located to the left of the building
+          and available at the CVS parking lot across the street. There are
+          several garages to park at for the reception: The Lower Locks Parking
+          Garage is located at 90 Warren Street, and is attached to UML Inn and
+          Conference Center.
+        </p>
       </div>
     </TwoCol>
     <Divider />
