@@ -108,6 +108,30 @@ const RSVPForm = () => {
             </label>
           </div>
         </fieldset>
+        <div className="rsvp-attending">
+          <legend>Will you also join us for Sunday brunch?</legend>
+          <div className="radio">
+            <input
+              type="radio"
+              value="yes"
+              name="rsvp-attending-brunch"
+              id="rsvp-attending-brunch-yes"
+              className="a11y"
+            />
+            <label htmlFor="rsvp-attending-brunch-yes">Yes</label>
+          </div>
+          <div className="radio">
+            <input
+              type="radio"
+              value="no"
+              name="rsvp-attending"
+              id="rsvp-attending-brunch-no"
+              className="a11y"
+            />
+            <label htmlFor="rsvp-attending-brunch-no">Regretfully, no</label>
+          </div>
+        </div>
+
         <fieldset>
           <button type="submit">Send your RSVP</button>
         </fieldset>
