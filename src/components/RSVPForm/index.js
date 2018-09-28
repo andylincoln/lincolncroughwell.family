@@ -124,7 +124,7 @@ const RSVPForm = () => {
             <input
               type="radio"
               value="no"
-              name="rsvp-attending"
+              name="rsvp-attending-brunch"
               id="rsvp-attending-brunch-no"
               className="a11y"
             />
