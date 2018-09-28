@@ -47,7 +47,7 @@ const WeddingDetailsPage = () => (
         </p>
       </div>
     </TwoCol>
-    <Divider />
+    <Divider id="accomodations" />
     <Accomodations />
     <Divider />
     <TwoCol className="wedding-party" id="wedding-party">
