@@ -43,7 +43,7 @@ const ceremony = {
   endTime: moment('2018-11-24 4:00 PM'),
   location: 'Methuen Memorial Music Hall',
   description:
-    'If you’re arriving the Friday before we would love to say hello.',
+    'The ceremony will be held in the historic 200 year old organ hall in Methuen.',
   cta_link: {
     type: CTA_TYPE_DIRECTIONS,
     url: `${DIRECTIONS_URL}Methuen+Memorial+Music+Hall,+192+Broadway,+Methuen,+MA+01844`
