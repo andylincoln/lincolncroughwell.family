@@ -24,7 +24,7 @@ const RSVPForm = () => {
             <div className="radio">
               <input
                 type="radio"
-                value="yes"
+                value="Attending"
                 name="rsvp-attending"
                 id="rsvp-attending-yes"
                 className="a11y"
@@ -34,7 +34,7 @@ const RSVPForm = () => {
             <div className="radio">
               <input
                 type="radio"
-                value="no"
+                value="Not Attending"
                 name="rsvp-attending"
                 id="rsvp-attending-no"
                 className="a11y"
@@ -53,7 +53,7 @@ const RSVPForm = () => {
               <input
                 type="number"
                 placeholder="1"
-                name="food-chicken"
+                name="party-size"
                 id="rsvp-form-party-size"
                 min="0"
                 max="15"
@@ -68,7 +68,8 @@ const RSVPForm = () => {
           <legend>
             <span>What would you like for dinner?*</span>
             <span className="description">
-              Please select the meals for each member of your party.
+              Please select the meals for each member of your party. 1 per
+              person
             </span>
           </legend>
           <div className="input-number">
@@ -113,7 +114,7 @@ const RSVPForm = () => {
           <div className="radio">
             <input
               type="radio"
-              value="yes"
+              value="Attending Brunch"
               name="rsvp-attending-brunch"
               id="rsvp-attending-brunch-yes"
               className="a11y"
@@ -123,7 +124,7 @@ const RSVPForm = () => {
           <div className="radio">
             <input
               type="radio"
-              value="no"
+              value="Not Attending Brunch"
               name="rsvp-attending-brunch"
               id="rsvp-attending-brunch-no"
               className="a11y"
