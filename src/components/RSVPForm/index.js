@@ -57,6 +57,7 @@ const RSVPForm = () => {
                 id="rsvp-form-party-size"
                 min="0"
                 max="15"
+                value="0"
               />
               <label htmlFor="rsvp-form-party-size" className="a11y">
                 The size of your party
@@ -79,6 +80,7 @@ const RSVPForm = () => {
               name="food-chicken"
               id="rsvp-form-food-chicken"
               min="0"
+              value="0"
             />
             <label htmlFor="rsvp-form-food-chicken" name="food">
               Chicken Picatta
@@ -91,6 +93,7 @@ const RSVPForm = () => {
               name="food-fish"
               id="rsvp-form-food-fish"
               min="0"
+              value="0"
             />
             <label htmlFor="rsvp-form-food-fish">
               New England Baked Haddock
@@ -103,6 +106,7 @@ const RSVPForm = () => {
               name="food-vegetarian"
               id="rsvp-form-food-veg"
               min="0"
+              value="0"
             />
             <label htmlFor="rsvp-form-food-veg" className="vegetarian">
               Butternut Squash Ravioli
