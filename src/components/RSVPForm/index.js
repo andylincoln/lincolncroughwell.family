@@ -29,7 +29,10 @@ const RSVPForm = () => {
                 id="rsvp-attending-yes"
                 className="a11y"
               />
-              <label htmlFor="rsvp-attending-yes">Yes</label>
+              <label htmlFor="rsvp-attending-yes">
+                Yes
+                <span className="a11y">I will be attending</span>
+              </label>
             </div>
             <div className="radio">
               <input
@@ -39,7 +42,10 @@ const RSVPForm = () => {
                 id="rsvp-attending-no"
                 className="a11y"
               />
-              <label htmlFor="rsvp-attending-no">Regretfully, no</label>
+              <label htmlFor="rsvp-attending-no">
+                Regretfully, no
+                <span className="a11y">I will not be attending</span>
+              </label>
             </div>
           </div>
           <div className="rsvp-party-size">
