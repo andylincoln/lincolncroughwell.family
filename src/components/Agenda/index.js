@@ -40,7 +40,7 @@ const ceremony = {
   },
   name: 'Ceremony',
   startTime: moment('2018-11-24 2:00 PM'),
-  endTime: moment('2018-11-24 4:00 PM'),
+  endTime: moment('2018-11-24 3:00 PM'),
   location: 'Methuen Memorial Music Hall',
   description:
     'The ceremony will be held in the historic 200 year old organ hall in Methuen.',
@@ -56,8 +56,8 @@ const cocktail_hour = {
     type: 'icon',
     icon: 'clinking'
   },
-  startTime: moment('2018-11-24 5:00 PM'),
-  endTime: moment('2018-11-24 6:00 PM'),
+  startTime: moment('2018-11-24 3:30 PM'),
+  endTime: moment('2018-11-24 5:30 PM'),
   location: 'Lowell Memorial Auditorium',
   description:
     'Join us in the lobby of the LMA to enjoy some hors d’oeuvre before kicking off the party.'
@@ -72,8 +72,8 @@ const reception = {
       alt: ''
     }
   },
-  startTime: moment('2018-11-24 6:00 PM'),
-  endTime: moment('2018-11-24 11:00 PM'),
+  startTime: moment('2018-11-24 5:30 PM'),
+  endTime: moment('2018-11-24 10:30 PM'),
   location: 'Lowell Memorial Auditorium',
   description: '',
   cta_link: {
