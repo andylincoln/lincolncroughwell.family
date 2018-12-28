@@ -5,10 +5,6 @@ const RSVPForm = () => {
       <form
         className="rsvp-form"
         name="rsvp"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        action="/rsvp-submitted"
       >
         <fieldset>
           <label>
