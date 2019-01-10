@@ -9,9 +9,6 @@ const Footer = () => (
       <form
         className="contact-form"
         name="contact"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
       >
         <fieldset>
           <label>
